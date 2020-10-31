@@ -22,5 +22,11 @@ namespace CineShowAPP
             frmReportePelicula rp = new frmReportePelicula();
             rp.ShowDialog();
         }
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPelicula p = new frmPelicula();
+            p.ShowDialog();
+        }
     }
 }

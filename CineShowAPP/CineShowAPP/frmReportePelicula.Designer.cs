@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dsPeliculas = new CineShowAPP.dsPeliculas();
             this.PeliculasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsPeliculas = new CineShowAPP.dsPeliculas();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.PeliculasTableAdapter = new CineShowAPP.dsPeliculasTableAdapters.PeliculasTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dsPeliculas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PeliculasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsPeliculas)).BeginInit();
             this.SuspendLayout();
+            // 
+            // PeliculasBindingSource
+            // 
+            this.PeliculasBindingSource.DataMember = "Peliculas";
+            this.PeliculasBindingSource.DataSource = this.dsPeliculas;
+            // 
+            // dsPeliculas
+            // 
+            this.dsPeliculas.DataSetName = "dsPeliculas";
+            this.dsPeliculas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -50,16 +60,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(728, 412);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dsPeliculas
-            // 
-            this.dsPeliculas.DataSetName = "dsPeliculas";
-            this.dsPeliculas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // PeliculasBindingSource
-            // 
-            this.PeliculasBindingSource.DataMember = "Peliculas";
-            this.PeliculasBindingSource.DataSource = this.dsPeliculas;
-            // 
             // PeliculasTableAdapter
             // 
             this.PeliculasTableAdapter.ClearBeforeFill = true;
@@ -68,13 +68,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(752, 436);
+            this.ClientSize = new System.Drawing.Size(744, 436);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmReportePelicula";
             this.Text = "frmReportePelicula";
             this.Load += new System.EventHandler(this.frmReportePelicula_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dsPeliculas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PeliculasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsPeliculas)).EndInit();
             this.ResumeLayout(false);
 
         }

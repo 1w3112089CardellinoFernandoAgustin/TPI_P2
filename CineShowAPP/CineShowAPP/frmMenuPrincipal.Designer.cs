@@ -116,6 +116,7 @@
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
             this.agregarToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.agregarToolStripMenuItem.Text = "Agregar pelicula";
+            this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
             // 
             // estrenosToolStripMenuItem
             // 
