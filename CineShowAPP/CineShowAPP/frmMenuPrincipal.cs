@@ -16,5 +16,11 @@ namespace CineShowAPP
         {
             InitializeComponent();
         }
+
+        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReportePelicula rp = new frmReportePelicula();
+            rp.ShowDialog();
+        }
     }
 }
