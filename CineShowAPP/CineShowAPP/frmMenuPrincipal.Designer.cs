@@ -72,6 +72,7 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.peliculasToolStripMenuItem,
@@ -86,7 +87,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(162, 452);
+            this.menuStrip1.Size = new System.Drawing.Size(222, 452);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -102,38 +103,38 @@
             this.peliculasToolStripMenuItem.Image = global::CineShowAPP.Properties.Resources.carrete_de_pelicula;
             this.peliculasToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10);
             this.peliculasToolStripMenuItem.Name = "peliculasToolStripMenuItem";
-            this.peliculasToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.peliculasToolStripMenuItem.Size = new System.Drawing.Size(183, 31);
             this.peliculasToolStripMenuItem.Text = "Peliculas";
             // 
             // carteleraToolStripMenuItem
             // 
             this.carteleraToolStripMenuItem.Name = "carteleraToolStripMenuItem";
-            this.carteleraToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.carteleraToolStripMenuItem.Size = new System.Drawing.Size(253, 32);
             this.carteleraToolStripMenuItem.Text = "Cartelera";
             // 
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(253, 32);
             this.agregarToolStripMenuItem.Text = "Altas pelicula";
             this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
             // 
             // estrenosToolStripMenuItem
             // 
             this.estrenosToolStripMenuItem.Name = "estrenosToolStripMenuItem";
-            this.estrenosToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.estrenosToolStripMenuItem.Size = new System.Drawing.Size(253, 32);
             this.estrenosToolStripMenuItem.Text = "Estrenos";
             // 
             // clasificacionesToolStripMenuItem
             // 
             this.clasificacionesToolStripMenuItem.Name = "clasificacionesToolStripMenuItem";
-            this.clasificacionesToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.clasificacionesToolStripMenuItem.Size = new System.Drawing.Size(253, 32);
             this.clasificacionesToolStripMenuItem.Text = "Clasificaciones";
             // 
             // salasToolStripMenuItem
             // 
             this.salasToolStripMenuItem.Name = "salasToolStripMenuItem";
-            this.salasToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.salasToolStripMenuItem.Size = new System.Drawing.Size(253, 32);
             this.salasToolStripMenuItem.Text = "Salas";
             // 
             // clientesToolStripMenuItem
@@ -147,31 +148,31 @@
             this.clientesToolStripMenuItem.Image = global::CineShowAPP.Properties.Resources.carrete_de_pelicula;
             this.clientesToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10);
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(183, 31);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // abrirToolStripMenuItem
             // 
             this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(249, 32);
             this.abrirToolStripMenuItem.Text = "Abrir listado";
             // 
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(249, 32);
             this.nuevoToolStripMenuItem.Text = "Nuevo cliente";
             // 
             // enviarToolStripMenuItem
             // 
             this.enviarToolStripMenuItem.Name = "enviarToolStripMenuItem";
-            this.enviarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enviarToolStripMenuItem.Size = new System.Drawing.Size(249, 32);
             this.enviarToolStripMenuItem.Text = "Exportar";
             // 
             // crearCopiaToolStripMenuItem
             // 
             this.crearCopiaToolStripMenuItem.Name = "crearCopiaToolStripMenuItem";
-            this.crearCopiaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.crearCopiaToolStripMenuItem.Size = new System.Drawing.Size(249, 32);
             this.crearCopiaToolStripMenuItem.Text = "Crear copia";
             // 
             // empleadosToolStripMenuItem
@@ -185,31 +186,31 @@
             this.empleadosToolStripMenuItem.Image = global::CineShowAPP.Properties.Resources.carrete_de_pelicula;
             this.empleadosToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10);
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(183, 31);
             this.empleadosToolStripMenuItem.Text = "Empleados";
             // 
             // abrirListadoToolStripMenuItem
             // 
             this.abrirListadoToolStripMenuItem.Name = "abrirListadoToolStripMenuItem";
-            this.abrirListadoToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.abrirListadoToolStripMenuItem.Size = new System.Drawing.Size(284, 32);
             this.abrirListadoToolStripMenuItem.Text = "Abrir listado";
             // 
             // nuevoToolStripMenuItem1
             // 
             this.nuevoToolStripMenuItem1.Name = "nuevoToolStripMenuItem1";
-            this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(203, 22);
+            this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(284, 32);
             this.nuevoToolStripMenuItem1.Text = "Nuevo empleado";
             // 
             // enviarToolStripMenuItem1
             // 
             this.enviarToolStripMenuItem1.Name = "enviarToolStripMenuItem1";
-            this.enviarToolStripMenuItem1.Size = new System.Drawing.Size(203, 22);
+            this.enviarToolStripMenuItem1.Size = new System.Drawing.Size(284, 32);
             this.enviarToolStripMenuItem1.Text = "Exportar";
             // 
             // crearCopiaToolStripMenuItem1
             // 
             this.crearCopiaToolStripMenuItem1.Name = "crearCopiaToolStripMenuItem1";
-            this.crearCopiaToolStripMenuItem1.Size = new System.Drawing.Size(203, 22);
+            this.crearCopiaToolStripMenuItem1.Size = new System.Drawing.Size(284, 32);
             this.crearCopiaToolStripMenuItem1.Text = "Crear copia";
             // 
             // reservasToolStripMenuItem
@@ -221,19 +222,19 @@
             this.reservasToolStripMenuItem.Image = global::CineShowAPP.Properties.Resources.carrete_de_pelicula;
             this.reservasToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10);
             this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
-            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(183, 31);
             this.reservasToolStripMenuItem.Text = "Reservas";
             // 
             // verToolStripMenuItem
             // 
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.verToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
             this.verToolStripMenuItem.Text = "Ver";
             // 
             // agregarToolStripMenuItem1
             // 
             this.agregarToolStripMenuItem1.Name = "agregarToolStripMenuItem1";
-            this.agregarToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
+            this.agregarToolStripMenuItem1.Size = new System.Drawing.Size(180, 32);
             this.agregarToolStripMenuItem1.Text = "Agregar";
             // 
             // editarToolStripMenuItem
@@ -248,37 +249,37 @@
             this.editarToolStripMenuItem.Image = global::CineShowAPP.Properties.Resources.carrete_de_pelicula;
             this.editarToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10);
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(183, 31);
             this.editarToolStripMenuItem.Text = "Editar";
             // 
             // deshacerToolStripMenuItem
             // 
             this.deshacerToolStripMenuItem.Name = "deshacerToolStripMenuItem";
-            this.deshacerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deshacerToolStripMenuItem.Size = new System.Drawing.Size(193, 32);
             this.deshacerToolStripMenuItem.Text = "Deshacer";
             // 
             // rehacerToolStripMenuItem
             // 
             this.rehacerToolStripMenuItem.Name = "rehacerToolStripMenuItem";
-            this.rehacerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rehacerToolStripMenuItem.Size = new System.Drawing.Size(193, 32);
             this.rehacerToolStripMenuItem.Text = "Rehacer";
             // 
             // cortarToolStripMenuItem
             // 
             this.cortarToolStripMenuItem.Name = "cortarToolStripMenuItem";
-            this.cortarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cortarToolStripMenuItem.Size = new System.Drawing.Size(193, 32);
             this.cortarToolStripMenuItem.Text = "Cortar";
             // 
             // copiarToolStripMenuItem
             // 
             this.copiarToolStripMenuItem.Name = "copiarToolStripMenuItem";
-            this.copiarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.copiarToolStripMenuItem.Size = new System.Drawing.Size(193, 32);
             this.copiarToolStripMenuItem.Text = "Copiar";
             // 
             // pegarToolStripMenuItem
             // 
             this.pegarToolStripMenuItem.Name = "pegarToolStripMenuItem";
-            this.pegarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pegarToolStripMenuItem.Size = new System.Drawing.Size(193, 32);
             this.pegarToolStripMenuItem.Text = "Pegar";
             // 
             // herramientasToolStripMenuItem
@@ -294,31 +295,31 @@
             this.herramientasToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10);
             this.herramientasToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
             this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
-            this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(183, 31);
             this.herramientasToolStripMenuItem.Text = "Herramientas";
             // 
             // calendarioToolStripMenuItem
             // 
             this.calendarioToolStripMenuItem.Name = "calendarioToolStripMenuItem";
-            this.calendarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calendarioToolStripMenuItem.Size = new System.Drawing.Size(214, 32);
             this.calendarioToolStripMenuItem.Text = "Calendario";
             // 
             // cálculosToolStripMenuItem
             // 
             this.cálculosToolStripMenuItem.Name = "cálculosToolStripMenuItem";
-            this.cálculosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cálculosToolStripMenuItem.Size = new System.Drawing.Size(214, 32);
             this.cálculosToolStripMenuItem.Text = "Cálculos";
             // 
             // ortografíaToolStripMenuItem
             // 
             this.ortografíaToolStripMenuItem.Name = "ortografíaToolStripMenuItem";
-            this.ortografíaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ortografíaToolStripMenuItem.Size = new System.Drawing.Size(214, 32);
             this.ortografíaToolStripMenuItem.Text = "Ortografía";
             // 
             // imprimirToolStripMenuItem
             // 
             this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(214, 32);
             this.imprimirToolStripMenuItem.Text = "Imprimir";
             // 
             // verToolStripMenuItem1
@@ -330,21 +331,22 @@
             this.verToolStripMenuItem1.Image = global::CineShowAPP.Properties.Resources.carrete_de_pelicula;
             this.verToolStripMenuItem1.Margin = new System.Windows.Forms.Padding(10);
             this.verToolStripMenuItem1.Name = "verToolStripMenuItem1";
-            this.verToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
+            this.verToolStripMenuItem1.Size = new System.Drawing.Size(183, 31);
             this.verToolStripMenuItem1.Text = "Ver";
             // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
             this.reportesToolStripMenuItem.Text = "Reportes";
             this.reportesToolStripMenuItem.Click += new System.EventHandler(this.reportesToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
             // 
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
             this.consultasToolStripMenuItem.Text = "Consultas";
+            this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -354,19 +356,19 @@
             this.ayudaToolStripMenuItem.Image = global::CineShowAPP.Properties.Resources.carrete_de_pelicula;
             this.ayudaToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10);
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(183, 31);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // versionToolStripMenuItem
             // 
             this.versionToolStripMenuItem.Name = "versionToolStripMenuItem";
-            this.versionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.versionToolStripMenuItem.Size = new System.Drawing.Size(225, 32);
             this.versionToolStripMenuItem.Text = "Acerca de ..";
             this.versionToolStripMenuItem.Click += new System.EventHandler(this.versionToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;

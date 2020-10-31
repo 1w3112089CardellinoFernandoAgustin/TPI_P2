@@ -12,7 +12,7 @@ namespace CineShowAPP
 {
     public partial class frmAPPCineShow : Form
     {
-        Datos oBase = new Datos();//al string de conexion recuerden una vez q usan el suyo, lo elimina y dejan vacio antes de subir al repo
+        Datos oBase = new Datos(@"");//Data Source=localhost;Initial Catalog=CineSHOW;Integrated Security=True
 
         List<string> listaProcAlamcenados = new List<string>();
 
@@ -165,7 +165,7 @@ namespace CineShowAPP
                     return;
                 }
                 sentenciaSQL=elegirSentencia(cboFiltroGenero.SelectedIndex+1);
-                tb=oBase.consultarTabla(sentenciaSQL);
+                tb=oBase.consultarProcedimiento(sentenciaSQL);
                 dgvConsuta1.DataSource = tb;
                 rbtFiltroGenero.Checked = false;
                 
@@ -173,19 +173,19 @@ namespace CineShowAPP
             else if (rbtFiltroSubconsulta.Checked)
             {
                 sentenciaSQL = listaProcAlamcenados[5];
-                tb = oBase.consultarTabla(sentenciaSQL);
+                tb = oBase.consultarProcedimiento(sentenciaSQL);
                 dgvConsuta1.DataSource = tb;
             }
             else if (chkSentenciaBase.Checked)
             {
                 sentenciaSQL = listaProcAlamcenados[7];
-                tb = oBase.consultarTabla(sentenciaSQL);
+                tb = oBase.consultarProcedimiento(sentenciaSQL);
                 dgvConsuta1.DataSource = tb;
             }
             else
             {
                 sentenciaSQL = listaProcAlamcenados[6];
-                tb = oBase.consultarTabla(sentenciaSQL);
+                tb = oBase.consultarProcedimiento(sentenciaSQL);
                 dgvConsuta1.DataSource = tb;
             }
 
@@ -272,7 +272,7 @@ namespace CineShowAPP
             if (rbtPelisEstrenoMundial.Checked)
             {
                 sentenciaSQL = listaProcAlamcenados[8];
-                tb = oBase.consultarTabla(sentenciaSQL);
+                tb = oBase.consultarProcedimiento(sentenciaSQL);
                 dgvConsulta2.DataSource = tb;
                 dgvConsulta2.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
                 dgvConsulta2.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -282,7 +282,7 @@ namespace CineShowAPP
             else if (rbtPelisAnioAnterior.Checked)
             {
                 sentenciaSQL = listaProcAlamcenados[9];
-                tb = oBase.consultarTabla(sentenciaSQL);
+                tb = oBase.consultarProcedimiento(sentenciaSQL);
                 dgvConsulta2.DataSource = tb;
                 dgvConsulta2.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
                 dgvConsulta2.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -292,7 +292,7 @@ namespace CineShowAPP
             else
             {
                 sentenciaSQL = listaProcAlamcenados[10];
-                tb = oBase.consultarTabla(sentenciaSQL);
+                tb = oBase.consultarProcedimiento(sentenciaSQL);
                 dgvConsulta2.DataSource = tb;
                 dgvConsulta2.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
                 dgvConsulta2.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -308,10 +308,10 @@ namespace CineShowAPP
 
         private void btnConsulta3_Click(object sender, EventArgs e)
         {
-            string sentenciaSQL = listaProcAlamcenados[11];//"exec sp_Consulta3_Original";
+            string sentenciaSQL = "exec sp_Consulta3_Original";
             DataTable tb = new DataTable();
             limpiarGrilla(dgvConsulta3);
-            tb = oBase.consultarTabla(sentenciaSQL);
+            tb = oBase.consultarProcedimiento(sentenciaSQL);
             dgvConsulta3.DataSource = tb;
             dgvConsulta3.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
             dgvConsulta3.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -329,8 +329,8 @@ namespace CineShowAPP
 
             if (rbtMesesMayorRendimiento.Checked)
             {
-                sentenciaSQL = listaProcAlamcenados[12];//"exec sp_Consulta4_Original";//12
-                tb = oBase.consultarTabla(sentenciaSQL);
+                sentenciaSQL = "exec sp_Consulta4_Original";//12
+                tb = oBase.consultarProcedimiento(sentenciaSQL);
                 dgvConsulta4.DataSource = tb;
                 dgvConsulta4.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
                 dgvConsulta4.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -341,7 +341,7 @@ namespace CineShowAPP
             else if (rbtImportesSupEsteAnio.Checked)
             {
                 sentenciaSQL = listaProcAlamcenados[13];//"exec sp_Consulta4_EsteAnio";//13
-                tb = oBase.consultarTabla(sentenciaSQL);
+                tb = oBase.consultarProcedimiento(sentenciaSQL);
                 dgvConsulta4.DataSource = tb;
                 dgvConsulta4.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
                 dgvConsulta4.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -364,8 +364,8 @@ namespace CineShowAPP
             limpiarGrilla(dgvConsulta7);
             if (rbtHistoricoTicketsTotal.Checked)
             {
-                sentenciaSQL = listaProcAlamcenados[14];//"exec sp_Consulta7_TicketsSupProm";//14
-                tb = oBase.consultarTabla(sentenciaSQL);
+                sentenciaSQL = "exec sp_Consulta7_TicketsSupProm";//14
+                tb = oBase.consultarProcedimiento(sentenciaSQL);
                 dgvConsulta7.DataSource = tb;
                 dgvConsulta7.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
                 dgvConsulta7.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -376,8 +376,8 @@ namespace CineShowAPP
             }
             else if (rbtHistoricoTicketsPeliSupMinutoProm.Checked)
             {
-                sentenciaSQL = listaProcAlamcenados[15];//"exec sp_Consulta7_Original";//15
-                tb = oBase.consultarTabla(sentenciaSQL);
+                sentenciaSQL = "exec sp_Consulta7_Original";//15
+                tb = oBase.consultarProcedimiento(sentenciaSQL);
                 dgvConsulta7.DataSource = tb;
                 dgvConsulta7.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
                 dgvConsulta7.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -401,7 +401,7 @@ namespace CineShowAPP
             if (rbtTodosClientes.Checked)
             {
                 sentenciaSQL = "exec sp_Consulta8_TodosClientes";
-                tb = oBase.consultarTabla(sentenciaSQL);
+                tb = oBase.consultarProcedimiento(sentenciaSQL);
                 dgvConsulta8.DataSource = tb;
                 dgvConsulta8.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
                 dgvConsulta8.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -413,7 +413,7 @@ namespace CineShowAPP
             else if (rbtClientesPremium.Checked)
             {
                 sentenciaSQL = "exec sp_Consulta8_original";
-                tb = oBase.consultarTabla(sentenciaSQL);
+                tb = oBase.consultarProcedimiento(sentenciaSQL);
                 dgvConsulta8.DataSource = tb;
                 dgvConsulta8.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
                 dgvConsulta8.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -437,7 +437,7 @@ namespace CineShowAPP
             if (rbtTodosRating.Checked)
             {
                 sentenciaSQL = "exec sp_Consulta5_PuntajesTodos";
-                tb = oBase.consultarTabla(sentenciaSQL);
+                tb = oBase.consultarProcedimiento(sentenciaSQL);
                 dgvConsulta5.DataSource = tb;
                 dgvConsulta5.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
                 dgvConsulta5.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -451,7 +451,7 @@ namespace CineShowAPP
             else if (rbtMostrarMayorRating.Checked)
             {
                 sentenciaSQL = "exec sp_Consulta5_Original";
-                tb = oBase.consultarTabla(sentenciaSQL);
+                tb = oBase.consultarProcedimiento(sentenciaSQL);
                 dgvConsulta5.DataSource = tb;
                 dgvConsulta5.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
                 dgvConsulta5.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -478,7 +478,7 @@ namespace CineShowAPP
             if (chkDetalleAnioAnterior.Checked)
             {
                 sentenciaSQL = "exec sp_Consulta6_Original";
-                tb = oBase.consultarTabla(sentenciaSQL);
+                tb = oBase.consultarProcedimiento(sentenciaSQL);
                 dgvConsulta6.DataSource = tb;
                 dgvConsulta6.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
                 dgvConsulta6.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -492,7 +492,7 @@ namespace CineShowAPP
             {
 
                 sentenciaSQL = "exec sp_Consulta6_MinutosTotales";
-                tb = oBase.consultarTabla(sentenciaSQL);
+                tb = oBase.consultarProcedimiento(sentenciaSQL);
                 dgvConsulta6.DataSource = tb;
                 dgvConsulta6.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
                 dgvConsulta6.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;

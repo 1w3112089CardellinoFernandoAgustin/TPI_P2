@@ -34,5 +34,11 @@ namespace CineShowAPP
             frmColaboradores c = new frmColaboradores();
             c.ShowDialog();
         }
+
+        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAPPCineShow app = new frmAPPCineShow();
+            app.ShowDialog();
+        }
     }
 }

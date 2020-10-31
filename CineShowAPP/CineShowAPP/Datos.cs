@@ -20,7 +20,7 @@ namespace CineShowAPP
             this.conx = new SqlConnection();
             this.com = new SqlCommand();
             this.lec = null;
-            this.cadConex = @"Data Source=(localdb)\ServerMeli;Initial Catalog=CineSHOW_BDMIn_TablaPeli_Auxil;Integrated Security=True";//"Data Source=localhost;Initial Catalog=CineSHOW_BDMIn_TablaPeli_Auxil;Integrated Security=True";
+            this.cadConex = @"";//"Data Source=localhost;Initial Catalog=CineSHOW_BDMIn_TablaPeli_Auxil;Integrated Security=True";
         }
 
         public Datos(string cadenaConexion)
@@ -53,6 +53,16 @@ namespace CineShowAPP
         {
             this.conectar();
             this.com.CommandText = "SELECT * FROM " + nombreTabla;
+            DataTable tabla = new DataTable();
+            tabla.Load(com.ExecuteReader());
+            this.desconectar();
+            return tabla;
+        }
+
+        public DataTable consultarProcedimiento(string consultaSql)
+        {
+            this.conectar();
+            this.com.CommandText = consultaSql;
             DataTable tabla = new DataTable();
             tabla.Load(com.ExecuteReader());
             this.desconectar();
