@@ -78,11 +78,27 @@ namespace CineShowAPP
 
         public void insertarPeliculas()
         {
-            string consultaSQL = "";
+            string consultaSQL = "insert into Peliculas (titulo, descripcion, id_genero, duracion, fecha_estreno, id_idioma, id_clasificacion, id_calificacion, id_nac) " +
+                                                         "values (@titulo,@descripcion,@genero,@duracion,@estreno,@idioma,@clasific,@calific,@nacion)";
 
             oBD.actualizarConParamteros(consultaSQL, this);
         }
 
+        public void editarPelicula()
+        {
+            string consultaSQL = "update Peliculas set titulo=@titulo, descripcion=@descripcion, id_genero=@genero, duracion=duracion, fecha_estreno=@estreno, " +
+                                                    "id_idioma=@idioma, id_clasificacion=@clasific, id_calificacion=@calific, id_nac=@nacion " +
+                                                    "where id_pelicula = @codigo";
+
+            oBD.actualizarConParamteros(consultaSQL, this);
+        }
+
+        public void eliminarPelicula()
+        {
+            string consultaSQL = "delete Peliculas where id_pelicula = @codigo";
+
+            oBD.actualizarConParamteros(consultaSQL, this);
+        }
 
 
         public List<Pelicula> retornarLista(string nombreTabla)

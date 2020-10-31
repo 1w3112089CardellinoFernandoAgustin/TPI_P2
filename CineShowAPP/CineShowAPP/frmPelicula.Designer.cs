@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.txtDuracion = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lstPeliculas = new System.Windows.Forms.ListBox();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -55,6 +55,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.txtDuracion = new System.Windows.Forms.MaskedTextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label11 = new System.Windows.Forms.Label();
+            this.lblCantCaract = new System.Windows.Forms.Label();
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // btnBorrar
@@ -63,9 +69,10 @@
             this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(92, 35);
-            this.btnBorrar.TabIndex = 12;
+            this.btnBorrar.TabIndex = 13;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnEditar
             // 
@@ -73,18 +80,10 @@
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(92, 35);
-            this.btnEditar.TabIndex = 11;
+            this.btnEditar.TabIndex = 12;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // txtDuracion
-            // 
-            this.txtDuracion.Location = new System.Drawing.Point(585, 76);
-            this.txtDuracion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtDuracion.Name = "txtDuracion";
-            this.txtDuracion.Size = new System.Drawing.Size(148, 26);
-            this.txtDuracion.TabIndex = 3;
             // 
             // label6
             // 
@@ -104,7 +103,7 @@
             this.lstPeliculas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstPeliculas.Name = "lstPeliculas";
             this.lstPeliculas.Size = new System.Drawing.Size(249, 484);
-            this.lstPeliculas.TabIndex = 55;
+            this.lstPeliculas.TabIndex = 10;
             this.lstPeliculas.SelectedIndexChanged += new System.EventHandler(this.lstPeliculas_SelectedIndexChanged);
             // 
             // btnSalir
@@ -113,9 +112,10 @@
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(92, 35);
-            this.btnSalir.TabIndex = 15;
+            this.btnSalir.TabIndex = 16;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnCancelar
             // 
@@ -123,7 +123,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(92, 35);
-            this.btnCancelar.TabIndex = 14;
+            this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -134,9 +134,10 @@
             this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(92, 35);
-            this.btnGrabar.TabIndex = 13;
+            this.btnGrabar.TabIndex = 14;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // btnNuevo
             // 
@@ -144,7 +145,7 @@
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(92, 35);
-            this.btnNuevo.TabIndex = 10;
+            this.btnNuevo.TabIndex = 11;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -171,9 +172,12 @@
             // 
             this.txtTitulo.Location = new System.Drawing.Point(585, 23);
             this.txtTitulo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTitulo.MaxLength = 70;
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(298, 26);
             this.txtTitulo.TabIndex = 1;
+            this.toolTip2.SetToolTip(this.txtTitulo, "El Titulo de la película no debe superar los 70 caracteres incluidos los espacios" +
+        ".");
             // 
             // txtCodigo
             // 
@@ -303,10 +307,14 @@
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(214, 308);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDescripcion.MaxLength = 280;
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(669, 198);
             this.txtDescripcion.TabIndex = 9;
+            this.txtDescripcion.Text = "(Máx. 280 caracteres)";
+            this.toolTip1.SetToolTip(this.txtDescripcion, "El Resumen no debe superar los 280 caracteres, incluidos los espacios.");
+            this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
             // label10
             // 
@@ -318,11 +326,59 @@
             this.label10.TabIndex = 68;
             this.label10.Text = "Resumen";
             // 
+            // txtDuracion
+            // 
+            this.txtDuracion.Location = new System.Drawing.Point(585, 79);
+            this.txtDuracion.Mask = "999";
+            this.txtDuracion.Name = "txtDuracion";
+            this.txtDuracion.PromptChar = '-';
+            this.txtDuracion.Size = new System.Drawing.Size(53, 26);
+            this.txtDuracion.TabIndex = 3;
+            this.toolTip3.SetToolTip(this.txtDuracion, "Debe ingresar la Duración en minutos");
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Limite";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(665, 521);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(133, 20);
+            this.label11.TabIndex = 69;
+            this.label11.Text = "Cant. Caracteres:";
+            // 
+            // lblCantCaract
+            // 
+            this.lblCantCaract.AutoSize = true;
+            this.lblCantCaract.Location = new System.Drawing.Point(806, 521);
+            this.lblCantCaract.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantCaract.Name = "lblCantCaract";
+            this.lblCantCaract.Size = new System.Drawing.Size(18, 20);
+            this.lblCantCaract.TabIndex = 70;
+            this.lblCantCaract.Text = "0";
+            // 
+            // toolTip2
+            // 
+            this.toolTip2.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip2.ToolTipTitle = "Limite";
+            // 
+            // toolTip3
+            // 
+            this.toolTip3.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip3.ToolTipTitle = "Limite";
+            // 
             // frmPelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1232, 654);
+            this.Controls.Add(this.lblCantCaract);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txtDuracion);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.cboNacionalidad);
@@ -335,7 +391,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.txtDuracion);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lstPeliculas);
             this.Controls.Add(this.btnSalir);
@@ -352,6 +407,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmPelicula";
             this.Text = "frmPelicula";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPelicula_FormClosing);
             this.Load += new System.EventHandler(this.frmPelicula_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -362,7 +418,6 @@
 
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.TextBox txtDuracion;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListBox lstPeliculas;
         private System.Windows.Forms.Button btnSalir;
@@ -387,5 +442,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.MaskedTextBox txtDuracion;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblCantCaract;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.ToolTip toolTip3;
     }
 }
