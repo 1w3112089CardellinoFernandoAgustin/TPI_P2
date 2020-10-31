@@ -23,10 +23,16 @@ namespace CineShowAPP
             rp.ShowDialog();
         }
 
-        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e) //formABMPelicula
         {
             frmPelicula p = new frmPelicula();
             p.ShowDialog();
+        }
+
+        private void versionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmColaboradores c = new frmColaboradores();
+            c.ShowDialog();
         }
     }
 }

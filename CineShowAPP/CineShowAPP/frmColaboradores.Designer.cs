@@ -91,9 +91,9 @@
             this.label1.Location = new System.Drawing.Point(26, 45);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 18);
+            this.label1.Size = new System.Drawing.Size(263, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Garnica, Vanesa";
+            this.label1.Text = "Garnica Rodriguez, Vanesa 110849";
             // 
             // label5
             // 
@@ -120,6 +120,7 @@
             this.Font = new System.Drawing.Font("Maiandra GD", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MaximizeBox = false;
             this.Name = "frmColaboradores";
             this.Text = "frmColaboradores";
             this.groupBox1.ResumeLayout(false);
