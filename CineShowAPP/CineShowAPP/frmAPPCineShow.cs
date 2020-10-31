@@ -12,7 +12,7 @@ namespace CineShowAPP
 {
     public partial class frmAPPCineShow : Form
     {
-        Datos oBase = new Datos(@"");//Data Source=localhost;Initial Catalog=CineSHOW;Integrated Security=True
+        Datos oBase = new Datos();//Data Source=localhost;Initial Catalog=CineSHOW;Integrated Security=True
 
         List<string> listaProcAlamcenados = new List<string>();
 

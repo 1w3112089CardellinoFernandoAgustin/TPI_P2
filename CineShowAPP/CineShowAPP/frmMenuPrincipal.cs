@@ -40,5 +40,24 @@ namespace CineShowAPP
             frmAPPCineShow app = new frmAPPCineShow();
             app.ShowDialog();
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+                                 
+        }
+
+        private void frmMenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro que desea salir",
+                    "SALIENDO",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            { MessageBox.Show("Gracias por usar la aplicación");
+                e.Cancel = false;
+            }
+            else e.Cancel = true;
+        }
     }
 }
