@@ -16,7 +16,7 @@ namespace CineShowAPP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmReportePelicula());
+            Application.Run(new frmMenuPrincipal());
         }
     }
 }
