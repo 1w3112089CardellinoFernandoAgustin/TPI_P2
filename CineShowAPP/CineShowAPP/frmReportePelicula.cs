@@ -23,6 +23,7 @@ namespace CineShowAPP
             this.PeliculasTableAdapter.Fill(this.dsPeliculas.Peliculas);
 
             this.reportViewer1.RefreshReport();
+            //this.reportViewer2.RefreshReport();
         }
     }
 }

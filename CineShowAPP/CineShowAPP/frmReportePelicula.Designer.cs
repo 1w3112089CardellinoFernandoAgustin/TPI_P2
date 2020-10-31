@@ -51,6 +51,7 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.AutoSize = true;
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.PeliculasBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
@@ -75,12 +76,14 @@
             this.ClientSize = new System.Drawing.Size(744, 436);
             this.Controls.Add(this.reportViewer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmReportePelicula";
             this.Text = "frmReportePelicula";
             this.Load += new System.EventHandler(this.frmReportePelicula_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PeliculasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPeliculas)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
