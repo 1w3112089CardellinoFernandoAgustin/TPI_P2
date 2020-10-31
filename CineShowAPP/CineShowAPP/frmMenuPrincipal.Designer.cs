@@ -336,14 +336,14 @@
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.reportesToolStripMenuItem.Text = "Reportes";
             this.reportesToolStripMenuItem.Click += new System.EventHandler(this.reportesToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
             // 
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.consultasToolStripMenuItem.Text = "Consultas";
             // 
             // ayudaToolStripMenuItem
@@ -360,8 +360,8 @@
             // versionToolStripMenuItem
             // 
             this.versionToolStripMenuItem.Name = "versionToolStripMenuItem";
-            this.versionToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.versionToolStripMenuItem.Text = "Version";
+            this.versionToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.versionToolStripMenuItem.Text = "Colaboradores";
             // 
             // frmMenuPrincipal
             // 
