@@ -68,7 +68,7 @@
             // 
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBorrar.Location = new System.Drawing.Point(397, 465);
-            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(81, 28);
             this.btnBorrar.TabIndex = 13;
@@ -80,7 +80,7 @@
             // 
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditar.Location = new System.Drawing.Point(241, 465);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(81, 28);
             this.btnEditar.TabIndex = 12;
@@ -94,18 +94,18 @@
             this.label6.Location = new System.Drawing.Point(389, 63);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 16);
+            this.label6.Size = new System.Drawing.Size(145, 25);
             this.label6.TabIndex = 56;
             this.label6.Text = "Duración (min.)";
             // 
             // lstPeliculas
             // 
             this.lstPeliculas.FormattingEnabled = true;
-            this.lstPeliculas.ItemHeight = 16;
+            this.lstPeliculas.ItemHeight = 25;
             this.lstPeliculas.Location = new System.Drawing.Point(841, 25);
-            this.lstPeliculas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstPeliculas.Margin = new System.Windows.Forms.Padding(4);
             this.lstPeliculas.Name = "lstPeliculas";
-            this.lstPeliculas.Size = new System.Drawing.Size(221, 388);
+            this.lstPeliculas.Size = new System.Drawing.Size(221, 379);
             this.lstPeliculas.TabIndex = 10;
             this.lstPeliculas.SelectedIndexChanged += new System.EventHandler(this.lstPeliculas_SelectedIndexChanged);
             // 
@@ -113,7 +113,7 @@
             // 
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.Location = new System.Drawing.Point(868, 465);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(81, 28);
             this.btnSalir.TabIndex = 16;
@@ -125,7 +125,7 @@
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Location = new System.Drawing.Point(711, 465);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(81, 28);
             this.btnCancelar.TabIndex = 15;
@@ -137,7 +137,7 @@
             // 
             this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGrabar.Location = new System.Drawing.Point(553, 465);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(81, 28);
             this.btnGrabar.TabIndex = 14;
@@ -149,7 +149,7 @@
             // 
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNuevo.Location = new System.Drawing.Point(84, 465);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(81, 28);
             this.btnNuevo.TabIndex = 11;
@@ -161,37 +161,37 @@
             // 
             this.dtpEstreno.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpEstreno.Location = new System.Drawing.Point(191, 101);
-            this.dtpEstreno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpEstreno.Margin = new System.Windows.Forms.Padding(4);
             this.dtpEstreno.Name = "dtpEstreno";
-            this.dtpEstreno.Size = new System.Drawing.Size(132, 22);
+            this.dtpEstreno.Size = new System.Drawing.Size(132, 30);
             this.dtpEstreno.TabIndex = 4;
             // 
             // cboGenero
             // 
             this.cboGenero.FormattingEnabled = true;
             this.cboGenero.Location = new System.Drawing.Point(191, 57);
-            this.cboGenero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboGenero.Margin = new System.Windows.Forms.Padding(4);
             this.cboGenero.Name = "cboGenero";
-            this.cboGenero.Size = new System.Drawing.Size(160, 24);
+            this.cboGenero.Size = new System.Drawing.Size(160, 33);
             this.cboGenero.TabIndex = 2;
             // 
             // txtTitulo
             // 
             this.txtTitulo.Location = new System.Drawing.Point(520, 18);
-            this.txtTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTitulo.MaxLength = 70;
             this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(265, 22);
+            this.txtTitulo.Size = new System.Drawing.Size(265, 30);
             this.txtTitulo.TabIndex = 1;
-            this.toolTip2.SetToolTip(this.txtTitulo, "El Titulo de la película no debe superar los 70 caracteres incluidos los espacios" +
-        ".");
+            this.toolTip2.SetToolTip(this.txtTitulo, "El Titulo de la película no debe superar los 70 caracteres, incluidos los espacio" +
+        "s.");
             // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(191, 16);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(132, 22);
+            this.txtCodigo.Size = new System.Drawing.Size(132, 30);
             this.txtCodigo.TabIndex = 0;
             // 
             // label5
@@ -200,7 +200,7 @@
             this.label5.Location = new System.Drawing.Point(40, 103);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 16);
+            this.label5.Size = new System.Drawing.Size(166, 25);
             this.label5.TabIndex = 47;
             this.label5.Text = "Fecha de Estreno";
             // 
@@ -210,7 +210,7 @@
             this.label3.Location = new System.Drawing.Point(105, 63);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 16);
+            this.label3.Size = new System.Drawing.Size(77, 25);
             this.label3.TabIndex = 43;
             this.label3.Text = "Género";
             // 
@@ -220,7 +220,7 @@
             this.label2.Location = new System.Drawing.Point(451, 21);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 16);
+            this.label2.Size = new System.Drawing.Size(60, 25);
             this.label2.TabIndex = 42;
             this.label2.Text = "Titulo";
             // 
@@ -230,7 +230,7 @@
             this.label1.Location = new System.Drawing.Point(108, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 16);
+            this.label1.Size = new System.Drawing.Size(75, 25);
             this.label1.TabIndex = 39;
             this.label1.Text = "Código";
             // 
@@ -238,9 +238,9 @@
             // 
             this.cboIdioma.FormattingEnabled = true;
             this.cboIdioma.Location = new System.Drawing.Point(520, 102);
-            this.cboIdioma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboIdioma.Margin = new System.Windows.Forms.Padding(4);
             this.cboIdioma.Name = "cboIdioma";
-            this.cboIdioma.Size = new System.Drawing.Size(160, 24);
+            this.cboIdioma.Size = new System.Drawing.Size(160, 33);
             this.cboIdioma.TabIndex = 5;
             // 
             // label4
@@ -249,7 +249,7 @@
             this.label4.Location = new System.Drawing.Point(441, 106);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 16);
+            this.label4.Size = new System.Drawing.Size(70, 25);
             this.label4.TabIndex = 59;
             this.label4.Text = "Idioma";
             // 
@@ -257,9 +257,9 @@
             // 
             this.cboCalificacion.FormattingEnabled = true;
             this.cboCalificacion.Location = new System.Drawing.Point(191, 144);
-            this.cboCalificacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboCalificacion.Margin = new System.Windows.Forms.Padding(4);
             this.cboCalificacion.Name = "cboCalificacion";
-            this.cboCalificacion.Size = new System.Drawing.Size(160, 24);
+            this.cboCalificacion.Size = new System.Drawing.Size(160, 33);
             this.cboCalificacion.TabIndex = 6;
             // 
             // label7
@@ -268,7 +268,7 @@
             this.label7.Location = new System.Drawing.Point(105, 146);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 16);
+            this.label7.Size = new System.Drawing.Size(78, 25);
             this.label7.TabIndex = 61;
             this.label7.Text = "Puntaje";
             // 
@@ -276,9 +276,9 @@
             // 
             this.cboClasificacion.FormattingEnabled = true;
             this.cboClasificacion.Location = new System.Drawing.Point(520, 146);
-            this.cboClasificacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboClasificacion.Margin = new System.Windows.Forms.Padding(4);
             this.cboClasificacion.Name = "cboClasificacion";
-            this.cboClasificacion.Size = new System.Drawing.Size(160, 24);
+            this.cboClasificacion.Size = new System.Drawing.Size(160, 33);
             this.cboClasificacion.TabIndex = 7;
             // 
             // label8
@@ -287,7 +287,7 @@
             this.label8.Location = new System.Drawing.Point(423, 146);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 16);
+            this.label8.Size = new System.Drawing.Size(97, 25);
             this.label8.TabIndex = 63;
             this.label8.Text = "Categoría";
             // 
@@ -295,9 +295,9 @@
             // 
             this.cboNacionalidad.FormattingEnabled = true;
             this.cboNacionalidad.Location = new System.Drawing.Point(191, 192);
-            this.cboNacionalidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboNacionalidad.Margin = new System.Windows.Forms.Padding(4);
             this.cboNacionalidad.Name = "cboNacionalidad";
-            this.cboNacionalidad.Size = new System.Drawing.Size(160, 24);
+            this.cboNacionalidad.Size = new System.Drawing.Size(160, 33);
             this.cboNacionalidad.TabIndex = 8;
             // 
             // label9
@@ -306,14 +306,14 @@
             this.label9.Location = new System.Drawing.Point(127, 194);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 16);
+            this.label9.Size = new System.Drawing.Size(50, 25);
             this.label9.TabIndex = 65;
             this.label9.Text = "País";
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(191, 246);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.MaxLength = 280;
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -329,7 +329,7 @@
             this.label10.Location = new System.Drawing.Point(92, 249);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 16);
+            this.label10.Size = new System.Drawing.Size(95, 25);
             this.label10.TabIndex = 68;
             this.label10.Text = "Resumen";
             // 
@@ -340,7 +340,7 @@
             this.txtDuracion.Mask = "999";
             this.txtDuracion.Name = "txtDuracion";
             this.txtDuracion.PromptChar = '-';
-            this.txtDuracion.Size = new System.Drawing.Size(48, 22);
+            this.txtDuracion.Size = new System.Drawing.Size(48, 30);
             this.txtDuracion.TabIndex = 3;
             this.toolTip3.SetToolTip(this.txtDuracion, "Debe ingresar la Duración en minutos");
             // 
@@ -355,7 +355,7 @@
             this.label11.Location = new System.Drawing.Point(591, 417);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(110, 16);
+            this.label11.Size = new System.Drawing.Size(166, 25);
             this.label11.TabIndex = 69;
             this.label11.Text = "Cant. Caracteres:";
             // 
@@ -365,7 +365,7 @@
             this.lblCantCaract.Location = new System.Drawing.Point(716, 417);
             this.lblCantCaract.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantCaract.Name = "lblCantCaract";
-            this.lblCantCaract.Size = new System.Drawing.Size(15, 16);
+            this.lblCantCaract.Size = new System.Drawing.Size(23, 25);
             this.lblCantCaract.TabIndex = 70;
             this.lblCantCaract.Text = "0";
             // 
@@ -377,11 +377,11 @@
             // toolTip3
             // 
             this.toolTip3.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip3.ToolTipTitle = "Limite";
+            this.toolTip3.ToolTipTitle = "Info";
             // 
             // frmPelicula
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BackgroundImage = global::CineShowAPP.Properties.Resources.pngtree_atmospheric_textured_film_and_television_company_propaganda_background_image_127872;

@@ -130,6 +130,7 @@ namespace CineShowAPP
             misPicks = picks.editar;
             habilitar(false);
             this.limpiar();
+            cargarCampos(lstPeliculas.SelectedIndex);
         }
 
         private void lstPeliculas_SelectedIndexChanged(object sender, EventArgs e)
@@ -213,7 +214,7 @@ namespace CineShowAPP
                         if(lPel[i].pIdioma == idioma)
                         {
                             if (MessageBox.Show("La película " + titulo + " ya figura en la Base de Datos (id_Pelicula: " + lPel[i].pPk + "). Está seguro que desea ingresarla nuevamente?",
-                                        "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                                        "AvISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                             {
                                 
                                 respuesta = true;
@@ -316,6 +317,7 @@ namespace CineShowAPP
                 lPel[b].eliminarPelicula();
                 cargarLista("Peliculas");
                 this.limpiar();
+                cargarCampos(lstPeliculas.SelectedIndex);
 
 
             }
