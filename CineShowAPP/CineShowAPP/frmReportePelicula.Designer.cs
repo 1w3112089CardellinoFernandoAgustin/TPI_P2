@@ -51,15 +51,20 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.reportViewer1.AutoSize = true;
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.PeliculasBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "CineShowAPP.rptPeliculas.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 12);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(10);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(728, 412);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.FullPage;
             // 
             // PeliculasTableAdapter
             // 
@@ -81,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PeliculasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPeliculas)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

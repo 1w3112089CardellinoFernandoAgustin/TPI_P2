@@ -20,9 +20,9 @@ namespace CineShowAPP
         private void frmReportePelicula_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dsPeliculas.Peliculas' Puede moverla o quitarla según sea necesario.
-            this.PeliculasTableAdapter.Fill(this.dsPeliculas.Peliculas);
+            //this.PeliculasTableAdapter.Fill(this.dsPeliculas.Peliculas);
 
-            this.reportViewer1.RefreshReport();
+            //this.reportViewer1.RefreshReport();
         }
     }
 }
