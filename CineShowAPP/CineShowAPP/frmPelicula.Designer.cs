@@ -1,0 +1,391 @@
+﻿namespace CineShowAPP
+{
+    partial class frmPelicula
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.txtDuracion = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lstPeliculas = new System.Windows.Forms.ListBox();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGrabar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.dtpEstreno = new System.Windows.Forms.DateTimePicker();
+            this.cboGenero = new System.Windows.Forms.ComboBox();
+            this.txtTitulo = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboIdioma = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboCalificacion = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cboClasificacion = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cboNacionalidad = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Location = new System.Drawing.Point(447, 582);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(92, 35);
+            this.btnBorrar.TabIndex = 12;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(271, 582);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(92, 35);
+            this.btnEditar.TabIndex = 11;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // txtDuracion
+            // 
+            this.txtDuracion.Location = new System.Drawing.Point(585, 76);
+            this.txtDuracion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDuracion.Name = "txtDuracion";
+            this.txtDuracion.Size = new System.Drawing.Size(148, 26);
+            this.txtDuracion.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(438, 79);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(116, 20);
+            this.label6.TabIndex = 56;
+            this.label6.Text = "Duración (min.)";
+            // 
+            // lstPeliculas
+            // 
+            this.lstPeliculas.FormattingEnabled = true;
+            this.lstPeliculas.ItemHeight = 20;
+            this.lstPeliculas.Location = new System.Drawing.Point(946, 31);
+            this.lstPeliculas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lstPeliculas.Name = "lstPeliculas";
+            this.lstPeliculas.Size = new System.Drawing.Size(249, 484);
+            this.lstPeliculas.TabIndex = 55;
+            this.lstPeliculas.SelectedIndexChanged += new System.EventHandler(this.lstPeliculas_SelectedIndexChanged);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(977, 582);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(92, 35);
+            this.btnSalir.TabIndex = 15;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(800, 582);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(92, 35);
+            this.btnCancelar.TabIndex = 14;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGrabar
+            // 
+            this.btnGrabar.Location = new System.Drawing.Point(623, 582);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(92, 35);
+            this.btnGrabar.TabIndex = 13;
+            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Location = new System.Drawing.Point(94, 582);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(92, 35);
+            this.btnNuevo.TabIndex = 10;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // dtpEstreno
+            // 
+            this.dtpEstreno.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEstreno.Location = new System.Drawing.Point(215, 126);
+            this.dtpEstreno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpEstreno.Name = "dtpEstreno";
+            this.dtpEstreno.Size = new System.Drawing.Size(148, 26);
+            this.dtpEstreno.TabIndex = 4;
+            // 
+            // cboGenero
+            // 
+            this.cboGenero.FormattingEnabled = true;
+            this.cboGenero.Location = new System.Drawing.Point(215, 71);
+            this.cboGenero.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboGenero.Name = "cboGenero";
+            this.cboGenero.Size = new System.Drawing.Size(180, 28);
+            this.cboGenero.TabIndex = 2;
+            // 
+            // txtTitulo
+            // 
+            this.txtTitulo.Location = new System.Drawing.Point(585, 23);
+            this.txtTitulo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Size = new System.Drawing.Size(298, 26);
+            this.txtTitulo.TabIndex = 1;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(215, 20);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(148, 26);
+            this.txtCodigo.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(45, 130);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(136, 20);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Fecha de Estreno";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(118, 79);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 20);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Género";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(507, 26);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 20);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Titulo";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(122, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 20);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Código";
+            // 
+            // cboIdioma
+            // 
+            this.cboIdioma.FormattingEnabled = true;
+            this.cboIdioma.Location = new System.Drawing.Point(585, 127);
+            this.cboIdioma.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboIdioma.Name = "cboIdioma";
+            this.cboIdioma.Size = new System.Drawing.Size(180, 28);
+            this.cboIdioma.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(497, 132);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 20);
+            this.label4.TabIndex = 59;
+            this.label4.Text = "Idioma";
+            // 
+            // cboCalificacion
+            // 
+            this.cboCalificacion.FormattingEnabled = true;
+            this.cboCalificacion.Location = new System.Drawing.Point(215, 180);
+            this.cboCalificacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboCalificacion.Name = "cboCalificacion";
+            this.cboCalificacion.Size = new System.Drawing.Size(180, 28);
+            this.cboCalificacion.TabIndex = 6;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(118, 183);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 20);
+            this.label7.TabIndex = 61;
+            this.label7.Text = "Puntaje";
+            // 
+            // cboClasificacion
+            // 
+            this.cboClasificacion.FormattingEnabled = true;
+            this.cboClasificacion.Location = new System.Drawing.Point(585, 183);
+            this.cboClasificacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboClasificacion.Name = "cboClasificacion";
+            this.cboClasificacion.Size = new System.Drawing.Size(180, 28);
+            this.cboClasificacion.TabIndex = 7;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(476, 183);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 20);
+            this.label8.TabIndex = 63;
+            this.label8.Text = "Categoría";
+            // 
+            // cboNacionalidad
+            // 
+            this.cboNacionalidad.FormattingEnabled = true;
+            this.cboNacionalidad.Location = new System.Drawing.Point(214, 240);
+            this.cboNacionalidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboNacionalidad.Name = "cboNacionalidad";
+            this.cboNacionalidad.Size = new System.Drawing.Size(180, 28);
+            this.cboNacionalidad.TabIndex = 8;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(142, 243);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(39, 20);
+            this.label9.TabIndex = 65;
+            this.label9.Text = "País";
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(214, 308);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(669, 198);
+            this.txtDescripcion.TabIndex = 9;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(103, 311);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 20);
+            this.label10.TabIndex = 68;
+            this.label10.Text = "Resumen";
+            // 
+            // frmPelicula
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1232, 654);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.cboNacionalidad);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.cboClasificacion);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cboCalificacion);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cboIdioma);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnBorrar);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.txtDuracion);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lstPeliculas);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGrabar);
+            this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.dtpEstreno);
+            this.Controls.Add(this.cboGenero);
+            this.Controls.Add(this.txtTitulo);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Name = "frmPelicula";
+            this.Text = "frmPelicula";
+            this.Load += new System.EventHandler(this.frmPelicula_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.TextBox txtDuracion;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ListBox lstPeliculas;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnGrabar;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.DateTimePicker dtpEstreno;
+        private System.Windows.Forms.ComboBox cboGenero;
+        private System.Windows.Forms.TextBox txtTitulo;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cboIdioma;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cboCalificacion;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cboClasificacion;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cboNacionalidad;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.Label label10;
+    }
+}
