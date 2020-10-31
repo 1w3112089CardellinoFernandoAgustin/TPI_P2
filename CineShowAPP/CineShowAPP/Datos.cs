@@ -20,7 +20,7 @@ namespace CineShowAPP
             this.conx = new SqlConnection();
             this.com = new SqlCommand();
             this.lec = null;
-            this.cadConex = "";//"Data Source=localhost;Initial Catalog=CineSHOW_BDMIn_TablaPeli_Auxil;Integrated Security=True";
+            this.cadConex = @"";//"Data Source=localhost;Initial Catalog=CineSHOW_BDMIn_TablaPeli_Auxil;Integrated Security=True";
         }
 
         public Datos(string cadenaConexion)
@@ -85,19 +85,25 @@ namespace CineShowAPP
 
         }
 
-        public void actualizarConParamteros(string consultaSql, object o)
+        public void actualizarConParamteros(string consultaSql, Pelicula p)
         {
             this.conectar();
             this.com.CommandText = consultaSql;
 
             this.com.Parameters.Clear();
 
-            //com.Parameters.AddWithValue("@detalle", p.pDetalle);
-            //com.Parameters.AddWithValue("@tipo", p.pTipo);
-            //com.Parameters.AddWithValue("@marca", p.pMarca);
-            //com.Parameters.AddWithValue("@precio", p.pPrecio);
-            //com.Parameters.AddWithValue("@fecha", p.pFecha);
-            //com.Parameters.AddWithValue("@codigo", p.pCodigo);
+            
+
+            com.Parameters.AddWithValue("@titulo", p.pTitulo );
+            com.Parameters.AddWithValue("@descripcion", p.pDescripcion);
+            com.Parameters.AddWithValue("@genero", p.pGenero);
+            com.Parameters.AddWithValue("@duracion", p.pDuracion);
+            com.Parameters.AddWithValue("@estreno", p.pEstreno);
+            com.Parameters.AddWithValue("@idioma", p.pIdioma);
+            com.Parameters.AddWithValue("@clasific", p.pClasificacion);
+            com.Parameters.AddWithValue("@calific", p.pCalificacion);
+            com.Parameters.AddWithValue("@nacion", p.pNacionalidad);
+            com.Parameters.AddWithValue("@codigo", p.pPk);
 
 
             this.com.ExecuteNonQuery();
