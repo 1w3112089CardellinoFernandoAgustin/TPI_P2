@@ -113,7 +113,7 @@ namespace CineShowAPP
                                    "join Clasificaciones cl on cl.id_clasificacion = p.id_clasificacion " +
 
                                    "join Nacionalidades n on n.id_nac = p.id_nac" +
-                                   " where fecha_estreno between '" + dtpDesde.Value + "' and  '" + dtpHasta.Value + "' ";
+                                   " where fecha_estreno between '" + dtpDesde.Value.ToString("yyyyMMdd") + "' and  '" + dtpHasta.Value.ToString("yyyyMMdd") + "' ";
 
                 this.dataTablePeliculasCompCBindingSource.DataSource = oBD.consultar(sentSQL);
                 this.reportViewer1.RefreshReport();
