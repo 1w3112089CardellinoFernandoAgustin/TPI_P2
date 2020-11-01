@@ -19,7 +19,7 @@ namespace CineShowAPP
             this.conx = new SqlConnection();
             this.com = new SqlCommand();
             this.lec = null;
-            this.cadConex = @"Data Source=localhost;Initial Catalog=CineSHOW;Integrated Security=True";//"Data Source=localhost;Initial Catalog=CineSHOW_BDMIn_TablaPeli_Auxil;Integrated Security=True";
+            this.cadConex = @"Data Source=DESKTOP-4NLK0BU\SQLEXPRESS;Initial Catalog=CineSHOW;Integrated Security=True";//"Data Source=localhost;Initial Catalog=CineSHOW_BDMIn_TablaPeli_Auxil;Integrated Security=True";
         }
         /*
         public Datos(string cadenaConexion)

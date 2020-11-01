@@ -72,6 +72,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsPeliculas.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsPelisComposicionC.cs">
+      <DependentUpon>dsPelisComposicionC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsPelisComposicionC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPelisComposicionC.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsTablaPeliComposicion.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -151,6 +159,17 @@
     </None>
     <None Include="dsPeliculas.xss">
       <DependentUpon>dsPeliculas.xsd</DependentUpon>
+    </None>
+    <None Include="dsPelisComposicionC.xsc">
+      <DependentUpon>dsPelisComposicionC.xsd</DependentUpon>
+    </None>
+    <None Include="dsPelisComposicionC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPelisComposicionC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsPelisComposicionC.xss">
+      <DependentUpon>dsPelisComposicionC.xsd</DependentUpon>
     </None>
     <None Include="dsTablaPeliComposicion.xsc">
       <DependentUpon>dsTablaPeliComposicion.xsd</DependentUpon>
