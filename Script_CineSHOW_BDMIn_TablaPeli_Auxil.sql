@@ -373,6 +373,7 @@ CREATE TABLE [dbo].[Peliculas](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+
 --/****** Object:  Table [dbo].[Peliculas_Actores]    Script Date: 21/9/2020 05:12:53 ******/
 --SET ANSI_NULLS ON
 --GO
@@ -808,6 +809,8 @@ insert into Peliculas (titulo, descripcion, id_genero, duracion, fecha_estreno, 
 				values ('Joker', 'En Gotham, Arthur Fleck, un comediante con problemas de salud mental, es marginado y maltratado por la sociedad. Se adentra en una espiral de crimen que resulta revolucionaria. Pronto conoce a su alter-ego, el Joker',4,122,'03/10/2019',1,3,4,3)
 insert into Peliculas (titulo, descripcion, id_genero, duracion, fecha_estreno, id_idioma, id_clasificacion, id_calificacion, id_nac) 
 				values('Parasite', 'La familia Ki-taek, todos desempleados, se ve envuelta en un incidente con la rica y glamurosa familia Parks', 4, 132, '23/01/2020', 1, 2, 4, 4)
+
+
 
 
 select id_pelicula, titulo,g.genero,duracion,fecha_estreno,i.idioma,cl.categoria,ca.puntaje,n.nacionalidad

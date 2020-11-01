@@ -72,6 +72,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsPeliculas.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsTablaPeliComposicion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTablaPeliComposicion.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmAPPCineShow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +151,17 @@
     </None>
     <None Include="dsPeliculas.xss">
       <DependentUpon>dsPeliculas.xsd</DependentUpon>
+    </None>
+    <None Include="dsTablaPeliComposicion.xsc">
+      <DependentUpon>dsTablaPeliComposicion.xsd</DependentUpon>
+    </None>
+    <None Include="dsTablaPeliComposicion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTablaPeliComposicion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsTablaPeliComposicion.xss">
+      <DependentUpon>dsTablaPeliComposicion.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
