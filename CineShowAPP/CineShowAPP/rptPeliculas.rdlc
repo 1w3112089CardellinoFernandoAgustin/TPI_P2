@@ -2,48 +2,71 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
+      <Line Name="Line2">
+        <Top>8.01687cm</Top>
+        <Left>0.04974cm</Left>
+        <Height>0cm</Height>
+        <Width>18.55048cm</Width>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line4">
+        <Top>0.02645cm</Top>
+        <Height>0cm</Height>
+        <Width>24.99432cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
       <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.65535cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>7.02529cm</Width>
+              <Width>3.65535cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.87042cm</Width>
+              <Width>3.65535cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.95894cm</Width>
+              <Width>3.65535cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.65535cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>3.65535cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.97042cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox8">
+                    <Textbox Name="Textbox1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>titulo</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
+                              <Value>Titulo</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox8</rd:DefaultName>
+                      <rd:DefaultName>Textbox1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -66,10 +89,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Descripcion</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
+                              <Value>Resumen</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -98,10 +119,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Fecha estreno</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
+                              <Value>Estreno</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -123,25 +142,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox3">
+                    <Textbox Name="Textbox13">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Duracion en min</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
+                              <Value>Duración (min.)</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Left</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox3</rd:DefaultName>
+                      <rd:DefaultName>Textbox13</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -164,18 +179,44 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Genero</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
+                              <Value>Género</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Left</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox15">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Idioma</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox15</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -316,21 +357,51 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="id_genero">
+                    <Textbox Name="genero">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!id_genero.Value</Value>
+                              <Value>=Fields!genero.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>id_genero</rd:DefaultName>
+                      <rd:DefaultName>genero</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="idioma">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!idioma.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>idioma</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -355,6 +426,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -367,40 +439,18 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
-        <Top>0.58208cm</Top>
-        <Left>0.39688cm</Left>
-        <Height>1.57042cm</Height>
-        <Width>17.85465cm</Width>
+        <DataSetName>DataSetPelisComposicion</DataSetName>
+        <Top>1.08162cm</Top>
+        <Left>1.48731cm</Left>
+        <Height>1.2cm</Height>
+        <Width>21.93208cm</Width>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Line Name="Line2">
-        <Top>8.01687cm</Top>
-        <Left>0.04974cm</Left>
-        <Height>0cm</Height>
-        <Width>18.55048cm</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Line Name="Line4">
-        <Top>0.02645cm</Top>
-        <Height>0cm</Height>
-        <Width>18.60022cm</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
     </ReportItems>
     <Height>3.15625in</Height>
     <Style>
@@ -415,7 +465,7 @@
       </RightBorder>
     </Style>
   </Body>
-  <Width>8.00509in</Width>
+  <Width>9.84028in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -442,7 +492,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>1.21391cm</Top>
-          <Left>4.86516cm</Left>
+          <Left>9.48655cm</Left>
           <Height>1.1497cm</Height>
           <Width>6.44229cm</Width>
           <Style>
@@ -473,7 +523,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
           <Top>0.31432cm</Top>
-          <Left>15.33292cm</Left>
+          <Left>21.9475cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <ZIndex>1</ZIndex>
@@ -577,18 +627,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="dsPeliculas">
+    <DataSource Name="dsTablaPeliComposicion">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>e4278009-8ada-42dd-a42c-523ddbf9cd74</rd:DataSourceID>
+      <rd:DataSourceID>ec1eb007-e569-4e04-b066-4dacfba78dc4</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="DataSetPelisComposicion">
       <Query>
-        <DataSourceName>dsPeliculas</DataSourceName>
+        <DataSourceName>dsTablaPeliComposicion</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -604,9 +654,9 @@
           <DataField>descripcion</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="id_genero">
-          <DataField>id_genero</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="genero">
+          <DataField>genero</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="duracion">
           <DataField>duracion</DataField>
@@ -616,30 +666,30 @@
           <DataField>fecha_estreno</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="id_idioma">
-          <DataField>id_idioma</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="idioma">
+          <DataField>idioma</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="id_clasificacion">
-          <DataField>id_clasificacion</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="categoria">
+          <DataField>categoria</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="id_calificacion">
-          <DataField>id_calificacion</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="puntaje">
+          <DataField>puntaje</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="id_nac">
-          <DataField>id_nac</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="nacionalidad">
+          <DataField>nacionalidad</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>dsPeliculas</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Leandro\Documents\GitHub\TPI_P2\CineShowAPP\CineShowAPP\dsPeliculas.xsd</rd:SchemaPath>
-        <rd:TableName>Peliculas</rd:TableName>
+        <rd:DataSetName>dsTablaPeliComposicion</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\User\Documents\Programacion_TUP\P2\TPI\TPI_P2\CineShowAPP\CineShowAPP\dsTablaPeliComposicion.xsd</rd:SchemaPath>
+        <rd:TableName>DataTablePeliculas</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>PeliculasTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>DataTablePeliculasTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
