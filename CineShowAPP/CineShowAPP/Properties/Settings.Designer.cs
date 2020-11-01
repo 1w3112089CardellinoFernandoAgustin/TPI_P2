@@ -44,5 +44,16 @@ namespace CineShowAPP.Properties {
                 return ((string)(this["CineSHOW_BDMIn_TablaPeli_AuxilConnectionStringFer"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4NLK0BU\\SQLEXPRESS;Initial Catalog=CineSHOW;Integrated Securi" +
+            "ty=True")]
+        public string CineSHOWConnectionStringBDTc {
+            get {
+                return ((string)(this["CineSHOWConnectionStringBDTc"]));
+            }
+        }
     }
 }
