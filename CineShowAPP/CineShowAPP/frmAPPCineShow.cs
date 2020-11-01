@@ -12,7 +12,7 @@ namespace CineShowAPP
 {
     public partial class frmAPPCineShow : Form
     {
-        Datos oBase = new Datos(@"Data Source=localhost;Initial Catalog=CineSHOW;Integrated Security=True");//Data Source=localhost;Initial Catalog=CineSHOW;Integrated Security=True
+        Datos oBase = new Datos();//Data Source=localhost;Initial Catalog=CineSHOW;Integrated Security=True
 
         List<string> listaProcAlamcenados = new List<string>();
 
@@ -208,6 +208,11 @@ namespace CineShowAPP
             //este metodo es para no poner todas las sentencias dentro del boton, segun el numero q se le pase al metodo es la sentencia
             //q enviará a sql
             string sentencia = "";
+            if(i >= 1 && i <= 6)
+            {
+                sentencia = listaProcAlamcenados[i - 1];
+            }
+            /*
             switch (i)
             {
                 //CONSULTA 1
@@ -244,6 +249,7 @@ namespace CineShowAPP
                 default:
                     break;
             }
+            */
             return sentencia;
         }
 

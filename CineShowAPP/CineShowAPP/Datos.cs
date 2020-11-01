@@ -14,15 +14,14 @@ namespace CineShowAPP
         private SqlCommand com;
         private SqlDataReader lec;
         private string cadConex;
-
         public Datos()
         {
             this.conx = new SqlConnection();
             this.com = new SqlCommand();
             this.lec = null;
-            this.cadConex = @"Data Source=localhost;Initial Catalog=CineSHOW_BDMIn_TablaPeli_Auxil;Integrated Security=True";//"Data Source=localhost;Initial Catalog=CineSHOW_BDMIn_TablaPeli_Auxil;Integrated Security=True";
+            this.cadConex = @"Data Source=localhost;Initial Catalog=CineSHOW;Integrated Security=True";//"Data Source=localhost;Initial Catalog=CineSHOW_BDMIn_TablaPeli_Auxil;Integrated Security=True";
         }
-
+        /*
         public Datos(string cadenaConexion)
         {
             this.conx = new SqlConnection();
@@ -30,7 +29,7 @@ namespace CineShowAPP
             this.lec = null;
             this.cadConex = cadenaConexion;
         }
-
+        */
         public SqlDataReader pLec { get => lec; set => lec = value; }
         public string pCadenaConexion { get => cadConex; set => cadConex = value; }
 
