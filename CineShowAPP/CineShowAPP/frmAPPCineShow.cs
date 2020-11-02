@@ -86,7 +86,16 @@ namespace CineShowAPP
 
         private void frmAPPCineShow_FormClosing(Object sender, FormClosingEventArgs e)
         {
-            MessageBox.Show("Gracias por usar la aplicacion!");
+            if (MessageBox.Show("Está seguro que desea salir?",
+                    "SALIENDO",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+               
+                e.Cancel = false;
+            }
+            else e.Cancel = true;
         }
 
         private void frmAPPCineShow_Load(object sender, EventArgs e)

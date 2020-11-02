@@ -49,12 +49,12 @@ namespace CineShowAPP
 
         private void frmMenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Esta seguro que desea salir",
+            if (MessageBox.Show("Está seguro que desea salir?",
                     "SALIENDO",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-            { MessageBox.Show("Gracias por usar la aplicación");
+            { MessageBox.Show("Gracias por usar la aplicación!");
                 e.Cancel = false;
             }
             else e.Cancel = true;
