@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportePelicula));
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dataTablePeliculasCompCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsPelisComposicionC = new CineShowAPP.dsPelisComposicionC();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dataTablePelisCompCTableAdapter = new CineShowAPP.dsPelisComposicionCTableAdapters.DataTablePelisCompCTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnImprimirPor = new System.Windows.Forms.Button();
@@ -57,6 +57,16 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // dataTablePeliculasCompCBindingSource
+            // 
+            this.dataTablePeliculasCompCBindingSource.DataMember = "DataTablePeliculasCompC";
+            this.dataTablePeliculasCompCBindingSource.DataSource = this.dsPelisComposicionC;
+            // 
+            // dsPelisComposicionC
+            // 
+            this.dsPelisComposicionC.DataSetName = "dsPelisComposicionC";
+            this.dsPelisComposicionC.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // reportViewer1
             // 
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -67,21 +77,11 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "CineShowAPP.rptPeliculas.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(2, 19);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(10);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(728, 412);
             this.reportViewer1.TabIndex = 7;
-            // 
-            // dataTablePeliculasCompCBindingSource
-            // 
-            this.dataTablePeliculasCompCBindingSource.DataMember = "DataTablePeliculasCompC";
-            this.dataTablePeliculasCompCBindingSource.DataSource = this.dsPelisComposicionC;
-            // 
-            // dsPelisComposicionC
-            // 
-            this.dsPelisComposicionC.DataSetName = "dsPelisComposicionC";
-            this.dsPelisComposicionC.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataTablePelisCompCTableAdapter
             // 
