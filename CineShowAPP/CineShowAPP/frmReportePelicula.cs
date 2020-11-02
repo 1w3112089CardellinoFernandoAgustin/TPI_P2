@@ -62,7 +62,29 @@ namespace CineShowAPP
                                "join Nacionalidades n on n.id_nac = p.id_nac ";
             this.dataTablePeliculasCompCBindingSource.DataSource = oBD.consultar(sentSQL);
             this.reportViewer1.RefreshReport();
+
+            this.limpiarTodo();
         }
+
+        private void limpiarTodo()
+        {
+            rbtDuracion.Checked = false;
+            rbtFecha.Checked = false;
+            rbtTitulo.Checked = false;
+            txtFiltroTitulo.Text = string.Empty;
+            dtpDesde.Value = DateTime.Now;
+            dtpHasta.Value = DateTime.Now;
+            cboGenero.SelectedIndex = -1;
+            cboIdioma.SelectedIndex = -1;
+        }
+
+
+
+       
+                        
+            
+       
+
 
         private void btnImprimirPor_Click(object sender, EventArgs e)
         {
@@ -83,17 +105,36 @@ namespace CineShowAPP
                                     "join Nacionalidades n on n.id_nac = p.id_nac ";
 
                 if (rbtTitulo.Checked)
-
+                {
                     sentSQL += " ORDER BY 2";
+                    limpiarMenos(rbtTitulo);
+                }
+
+                    
+
                 if (rbtDuracion.Checked)
+                {
                     sentSQL += " ORDER BY 5 ";
+                    limpiarMenos(rbtDuracion);
+                }
+                    
                 if (rbtFecha.Checked)
+                {
                     sentSQL += " ORDER BY 6";
+                    limpiarMenos(rbtFecha);
+                }
+                    
 
                 this.dataTablePeliculasCompCBindingSource.DataSource = oBD.consultar(sentSQL);
                 this.reportViewer1.RefreshReport();
+               
 
             }
+            //txtFiltroTitulo.Clear();
+            //dtpDesde.Value = DateTime.Now;
+            //dtpHasta.Value = DateTime.Now;
+            //cboGenero.SelectedIndex = -1;
+            //cboIdioma.SelectedIndex = -1;
         }
 
         private void dtpFiltroFecha_Click(object sender, EventArgs e)
@@ -117,6 +158,7 @@ namespace CineShowAPP
 
                 this.dataTablePeliculasCompCBindingSource.DataSource = oBD.consultar(sentSQL);
                 this.reportViewer1.RefreshReport();
+                limpiarMenos(dtpDesde);
             }
         }
 
@@ -142,7 +184,9 @@ namespace CineShowAPP
 
                 this.dataTablePeliculasCompCBindingSource.DataSource = oBD.consultar(sentSQL);
                 this.reportViewer1.RefreshReport();
+                limpiarMenos(txtFiltroTitulo);
             }
+
         }
 
         private void btnGenero_Click(object sender, EventArgs e)
@@ -166,6 +210,7 @@ namespace CineShowAPP
 
                 this.dataTablePeliculasCompCBindingSource.DataSource = oBD.consultar(sentSQL);
                 this.reportViewer1.RefreshReport();
+                limpiarMenos(cboGenero);
             }
         }
 
@@ -190,6 +235,8 @@ namespace CineShowAPP
 
                 this.dataTablePeliculasCompCBindingSource.DataSource = oBD.consultar(sentSQL);
                 this.reportViewer1.RefreshReport();
+                limpiarMenos(cboIdioma);
+
             }
         }
 
@@ -206,5 +253,95 @@ namespace CineShowAPP
             }
             else e.Cancel = true;
         }
+
+
+
+
+
+
+
+        private void limpiarMenos(object o)
+        {
+            if(o is RadioButton)
+            {
+                if(o == rbtDuracion)
+                {
+                    rbtFecha.Checked = false;
+                    rbtTitulo.Checked = false;
+                }
+                else if(o == rbtFecha)
+                {
+                    rbtDuracion.Checked = false;
+                    rbtTitulo.Checked = false;
+                }
+                else if (o == rbtTitulo)
+                {
+                    rbtFecha.Checked = false;
+                    rbtDuracion.Checked = false;
+                }
+
+                txtFiltroTitulo.Text = "";
+                dtpDesde.Value = DateTime.Now;
+                dtpHasta.Value = DateTime.Now;
+                cboGenero.SelectedIndex = -1;
+                cboIdioma.SelectedIndex = -1;
+            }
+
+            else if(o is TextBox)
+            {
+                dtpDesde.Value = DateTime.Now;
+                dtpHasta.Value = DateTime.Now;
+                cboGenero.SelectedIndex = -1;
+                cboIdioma.SelectedIndex = -1;
+                rbtDuracion.Checked = false;
+                rbtTitulo.Checked = false;
+                rbtFecha.Checked = false;
+            }
+
+            else if (o is DateTimePicker)
+            {
+                cboGenero.SelectedIndex = -1;
+                cboIdioma.SelectedIndex = -1;
+                rbtDuracion.Checked = false;
+                rbtTitulo.Checked = false;
+                rbtFecha.Checked = false;
+                txtFiltroTitulo.Text = "";
+
+            }
+
+            else if(o is ComboBox)
+            {
+                if(o == cboGenero)
+                {
+                    dtpDesde.Value = DateTime.Now;
+                    dtpHasta.Value = DateTime.Now;
+                    txtFiltroTitulo.Text = "";
+                    cboIdioma.SelectedIndex = -1;
+                    rbtDuracion.Checked = false;
+                    rbtTitulo.Checked = false;
+                    rbtFecha.Checked = false;
+                }
+                else if (o == cboIdioma)
+                {
+                    dtpDesde.Value = DateTime.Now;
+                    dtpHasta.Value = DateTime.Now;
+                    txtFiltroTitulo.Text = "";
+                    cboGenero.SelectedIndex = -1;
+                    rbtDuracion.Checked = false;
+                    rbtTitulo.Checked = false;
+                    rbtFecha.Checked = false;
+                }
+            }
+
+
+        }
+
+
+
+
+
+
+
+
     }
 }
