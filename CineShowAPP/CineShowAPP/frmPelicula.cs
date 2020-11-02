@@ -330,7 +330,7 @@ namespace CineShowAPP
 
         private void frmPelicula_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Esta seguro que desea salir?", "SALIENDO",
+            if (MessageBox.Show("Está seguro que desea salir?", "SALIENDO",
                                 MessageBoxButtons.YesNo,
                                 MessageBoxIcon.Question,
                                 MessageBoxDefaultButton.Button2) == DialogResult.Yes)
