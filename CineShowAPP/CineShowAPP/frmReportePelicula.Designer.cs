@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportePelicula));
             this.dataTablePeliculasCompCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsPelisComposicionC = new CineShowAPP.dsPelisComposicionC();
@@ -78,15 +78,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewer1.AutoSize = true;
-            reportDataSource3.Name = "DataSet1";
-            reportDataSource3.Value = this.dataTablePeliculasCompCBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.dataTablePeliculasCompCBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "CineShowAPP.rptPeliculas.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(48, 20);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(15);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1058, 847);
+            this.reportViewer1.Size = new System.Drawing.Size(850, 426);
             this.reportViewer1.TabIndex = 7;
             // 
             // dataTablePelisCompCTableAdapter
@@ -163,7 +163,7 @@
             this.txtFiltroTitulo.Location = new System.Drawing.Point(4, 334);
             this.txtFiltroTitulo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtFiltroTitulo.Name = "txtFiltroTitulo";
-            this.txtFiltroTitulo.Size = new System.Drawing.Size(313, 26);
+            this.txtFiltroTitulo.Size = new System.Drawing.Size(273, 26);
             this.txtFiltroTitulo.TabIndex = 3;
             // 
             // btnFiltrarTitulo
@@ -204,7 +204,7 @@
             this.dtpHasta.Location = new System.Drawing.Point(4, 509);
             this.dtpHasta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(313, 26);
+            this.dtpHasta.Size = new System.Drawing.Size(273, 26);
             this.dtpHasta.TabIndex = 6;
             // 
             // dtpDesde
@@ -212,7 +212,7 @@
             this.dtpDesde.Location = new System.Drawing.Point(4, 448);
             this.dtpDesde.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(313, 26);
+            this.dtpDesde.Size = new System.Drawing.Size(273, 26);
             this.dtpDesde.TabIndex = 5;
             // 
             // btnImprimirTodo
@@ -237,7 +237,7 @@
             this.cboGenero.Location = new System.Drawing.Point(4, 623);
             this.cboGenero.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboGenero.Name = "cboGenero";
-            this.cboGenero.Size = new System.Drawing.Size(312, 28);
+            this.cboGenero.Size = new System.Drawing.Size(273, 28);
             this.cboGenero.TabIndex = 8;
             // 
             // cboIdioma
@@ -246,7 +246,7 @@
             this.cboIdioma.Location = new System.Drawing.Point(4, 739);
             this.cboIdioma.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboIdioma.Name = "cboIdioma";
-            this.cboIdioma.Size = new System.Drawing.Size(312, 28);
+            this.cboIdioma.Size = new System.Drawing.Size(273, 28);
             this.cboIdioma.TabIndex = 10;
             // 
             // lblGenero
@@ -370,7 +370,7 @@
             this.tableLayoutPanel1.Controls.Add(this.dtpDesde, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.dtpHasta, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.btnIdioma, 0, 16);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(1140, 20);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(917, 20);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 17;
@@ -391,7 +391,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(375, 846);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(296, 825);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // frmReportePelicula
@@ -401,7 +401,7 @@
             this.AutoSize = true;
             this.BackgroundImage = global::CineShowAPP.Properties.Resources.pngtree_atmospheric_textured_film_and_television_company_propaganda_background_image_127872;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1560, 885);
+            this.ClientSize = new System.Drawing.Size(1352, 464);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.reportViewer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
