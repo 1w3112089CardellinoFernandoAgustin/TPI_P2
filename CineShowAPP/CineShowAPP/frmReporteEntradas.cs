@@ -110,7 +110,7 @@ namespace CineShowAPP
         {
             if (string.IsNullOrEmpty(txtNomCliente.Text))
             {
-                MessageBox.Show("Debe ingresar nombre y/o apellido de algún cliente", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe ingresar nombre de algún cliente", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNomCliente.Focus();
 
             }
@@ -126,7 +126,7 @@ namespace CineShowAPP
                                 " join Clientes c on c.id_cliente = cc.id_cliente " +
                                 " join Salas s on s.id_sala = sf.id_sala " +
                                 " join Tipos_Salas ts on ts.id_tipo_sala = s.id_tipo_sala " +
-                                " where c.nombre+' '+c.apellido LIKE  '%" + txtNomCliente.Text + "%' " +
+                                " where c.nombre LIKE  '" + txtNomCliente.Text + "%' " +
                                 " group by p.id_pelicula,p.titulo,f.id_funcion, f.dia_funcion,c.id_cliente,c.nombre,c.apellido, ts.tipo_sala, dc.monto " +
                                 " order by 1 ";
 
@@ -205,6 +205,7 @@ namespace CineShowAPP
                 if (o is ComboBox)
                 {
                    txtNomCliente.Text = string.Empty;
+                   txtApeCliente.Text = string.Empty;
                    txtFiltroTituloE.Text = string.Empty;
                    dtpDesdeE.Value = DateTime.Now;
                    dtpHastaE.Value = DateTime.Now;
@@ -215,14 +216,24 @@ namespace CineShowAPP
                     if (o == txtNomCliente)
                     {
                         cboTipoSala.SelectedIndex = -1;
+                        txtApeCliente.Text = string.Empty;
                         txtFiltroTituloE.Text = string.Empty;
                         dtpDesdeE.Value = DateTime.Now;
                         dtpHastaE.Value = DateTime.Now;
                     }
+                    else if (o == txtApeCliente)
+                    {
+                        cboTipoSala.SelectedIndex = -1;
+                        txtNomCliente.Text = string.Empty;
+                        txtFiltroTituloE.Text = string.Empty;
+                        dtpDesdeE.Value = DateTime.Now;
+                        dtpHastaE.Value = DateTime.Now;
+                }
                     else if (o == txtFiltroTituloE)
                     {
                         cboTipoSala.SelectedIndex = -1;
                         txtNomCliente.Text = string.Empty;
+                        txtApeCliente.Text = string.Empty;
                         dtpDesdeE.Value = DateTime.Now;
                         dtpHastaE.Value = DateTime.Now;
                     }
@@ -232,6 +243,7 @@ namespace CineShowAPP
                 {
                     cboTipoSala.SelectedIndex = -1;
                     txtNomCliente.Text = string.Empty;
+                    txtApeCliente.Text = string.Empty;
                     txtFiltroTituloE.Text = string.Empty;
                 }
         }
@@ -248,6 +260,37 @@ namespace CineShowAPP
                 e.Cancel = false;
             }
             else e.Cancel = true;
+        }
+
+        private void btnApeCliente_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtApeCliente.Text))
+            {
+                MessageBox.Show("Debe ingresar apellido de algún cliente", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtApeCliente.Focus();
+
+            }
+            else
+            {
+                string sentenciaSQL = "Select p.id_pelicula, p.titulo,f.dia_funcion, " +
+                                " c.nombre+' '+c.apellido Cliente, count(*) 'Cantidad_Entradas', dc.monto, " +
+                                " ts.tipo_sala, sum(dc.monto) 'Monto_Total' " +
+                                " from Peliculas p join Funciones f on f.id_pelicula = p.id_pelicula " +
+                                " join Salas_Funciones sf on sf.id_funcion = f.id_funcion " +
+                                " join Detalles_Comprobantes dc on dc.id_sala_funcion = sf.id_sala_funcion " +
+                                " join Comprobantes_Compras cc on cc.id_comprobante = dc.id_comprobante " +
+                                " join Clientes c on c.id_cliente = cc.id_cliente " +
+                                " join Salas s on s.id_sala = sf.id_sala " +
+                                " join Tipos_Salas ts on ts.id_tipo_sala = s.id_tipo_sala " +
+                                " where c.apellido LIKE  '" + txtApeCliente.Text + "%' " +
+                                " group by p.id_pelicula,p.titulo,f.id_funcion, f.dia_funcion,c.id_cliente,c.nombre,c.apellido, ts.tipo_sala, dc.monto " +
+                                " order by 1 ";
+
+                this.dataTableEntradasOkBindingSource.DataSource = oBD.consultar(sentenciaSQL);
+                this.reportViewer2E.RefreshReport();
+
+                this.limpiarMenos(txtApeCliente);
+            }
         }
     }
 }
