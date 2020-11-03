@@ -141,7 +141,7 @@ namespace CineShowAPP
         {
             if (string.IsNullOrEmpty(txtFiltroTituloE.Text))
             {
-                MessageBox.Show("Debe ingresar titulo de alguna pelicula", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe ingresar título de alguna pelicula", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtFiltroTituloE.Focus();
 
             }
