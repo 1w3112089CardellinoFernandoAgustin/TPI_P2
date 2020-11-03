@@ -19,8 +19,8 @@ namespace CineShowAPP
 
         private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmReportePelicula rp = new frmReportePelicula();
-            rp.ShowDialog();
+            //frmReportePelicula rp = new frmReportePelicula();
+            //rp.ShowDialog();
         }
 
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e) //formABMPelicula
@@ -58,6 +58,18 @@ namespace CineShowAPP
                 e.Cancel = false;
             }
             else e.Cancel = true;
+        }
+
+        private void peliculasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmReportePelicula rp = new frmReportePelicula();
+            rp.ShowDialog();
+        }
+
+        private void entradasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteEntradas re = new frmReporteEntradas();
+            re.ShowDialog();
         }
     }
 }
