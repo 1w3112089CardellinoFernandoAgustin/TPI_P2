@@ -126,7 +126,7 @@ namespace CineShowAPP
                                 " join Clientes c on c.id_cliente = cc.id_cliente " +
                                 " join Salas s on s.id_sala = sf.id_sala " +
                                 " join Tipos_Salas ts on ts.id_tipo_sala = s.id_tipo_sala " +
-                                " where c.nombre+' '+c.apellido LIKE '" + txtNomCliente.Text + "%' " +
+                                " where c.nombre+' '+c.apellido LIKE  '%" + txtNomCliente.Text + "%' " +
                                 " group by p.id_pelicula,p.titulo,f.id_funcion, f.dia_funcion,c.id_cliente,c.nombre,c.apellido, ts.tipo_sala, dc.monto " +
                                 " order by 1 ";
 

@@ -628,7 +628,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>=Globals!ExecutionTime</Value>
-                  <Style />
+                  <Style>
+                    <Format>d/M/yyyy</Format>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
