@@ -130,11 +130,11 @@ namespace CineShowAPP
                
 
             }
-            //txtFiltroTitulo.Clear();
-            //dtpDesde.Value = DateTime.Now;
-            //dtpHasta.Value = DateTime.Now;
-            //cboGenero.SelectedIndex = -1;
-            //cboIdioma.SelectedIndex = -1;
+            ////txtFiltroTitulo.Clear();
+            ////dtpDesde.Value = DateTime.Now;
+            ////dtpHasta.Value = DateTime.Now;
+            ////cboGenero.SelectedIndex = -1;
+            ////cboIdioma.SelectedIndex = -1;
         }
 
         private void dtpFiltroFecha_Click(object sender, EventArgs e)
