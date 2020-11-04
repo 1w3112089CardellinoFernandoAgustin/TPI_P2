@@ -6,8 +6,11 @@ Integrantes:
 - 111894 - Marini, Melisa Ailen.
 - 111896 - Cornaglia, Leandro Leonel.
 - 112089 - Cardellino, Fernando Agustin.
+
 Curso: 1W3.
+
 Materia: Programación II.
+
 Fecha de entrega: 04/11/2020
 
 
