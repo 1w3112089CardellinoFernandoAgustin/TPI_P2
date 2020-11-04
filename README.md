@@ -1,15 +1,13 @@
 # TPI_P2
 Trabajo Práctico Integrador de Programación 2
 
-Integrantes:    110849 - Garnica Rodriguez, Vanesa.
-                111894 - Marini, Melisa Ailen.
-                111896 - Cornaglia, Leandro Leonel.
-                112089 - Cardellino, Fernando Agustin.
-
+Integrantes:    
+- 110849 - Garnica Rodriguez, Vanesa.
+- 111894 - Marini, Melisa Ailen.
+- 111896 - Cornaglia, Leandro Leonel.
+- 112089 - Cardellino, Fernando Agustin.
 Curso: 1W3.
-
 Materia: Programación II.
-
 Fecha de entrega: 04/11/2020
 
 
@@ -21,12 +19,12 @@ NOTAS ACLARATORIAS:
 2) Se acompaña el Script de la Base de Datos. 
 
 3)Los menues que tienen funcionalidad son los siguientes:
-  A) En el menú Peliculas, el submenu Altas Peliculas contiene el ABM de Películas. En este caso se trabajaron las tablas: Peliculas, Generos, Idiomas,  Clasificaciones, Calificacion, Nacionalidades.
-  B) En el menú Ver, submenú Reportes, se encuentran tres reportes:
-    B.1) Peliculas. En este caso se trabajaron las tablas: Peliculas, Generos, Idiomas,  Clasificaciones, Calificacion, Nacionalidades.
-    B.2) Entradas. En este caso se trabajaron las tablas: Peliculas, Funciones, Salas_Funciones, Detalles_Comprobantes, Comprobantes_Compras, Clientes, Salas, Tipos_Salas.
-    B.3) Ventas. En este caso se trabajaron las tablas: Tickets, Detalles_Comprobantes, Descuentos, Comprobantes_Compras, Salas_Funciones, Funciones, Peliculas, Empleados, Clientes.
-   C) En el menú Ver, submenú Consultas, se encuentra el form presentado para Laboratorio de Computación II, con las consultas respectivas. Para que funcione adecaudamente deben ejecutarse los procedimeintos almacenados que incluye el Script de la BD CineShow.
+A) En el menú Peliculas, el submenu Altas Peliculas contiene el ABM de Películas. En este caso se trabajaron las tablas: Peliculas, Generos, Idiomas,  Clasificaciones, Calificacion, Nacionalidades.
+B) En el menú Ver, submenú Reportes, se encuentran tres reportes:
+B.1) Peliculas. En este caso se trabajaron las tablas: Peliculas, Generos, Idiomas,  Clasificaciones, Calificacion, Nacionalidades.
+B.2) Entradas. En este caso se trabajaron las tablas: Peliculas, Funciones, Salas_Funciones, Detalles_Comprobantes, Comprobantes_Compras, Clientes, Salas, Tipos_Salas.
+B.3) Ventas. En este caso se trabajaron las tablas: Tickets, Detalles_Comprobantes, Descuentos, Comprobantes_Compras, Salas_Funciones, Funciones, Peliculas, Empleados, Clientes.
+C) En el menú Ver, submenú Consultas, se encuentra el form presentado para Laboratorio de Computación II, con las consultas respectivas. Para que funcione adecaudamente deben ejecutarse los procedimeintos almacenados que incluye el Script de la BD CineShow.
    
     
 RECOMENDACIONES:
