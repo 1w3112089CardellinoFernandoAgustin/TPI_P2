@@ -32,5 +32,5 @@ C) En el menú Ver, submenú Consultas, se encuentra el form presentado para Lab
     
 RECOMENDACIONES:
 - Al momento de ejecutar el Scrip de la BD: Puede suceder que cuando se ejecuten los inserts salte algún error al llegar a los inserts de FUNCIONES (no hemos descubierto el motivo ya que los datos respetan la sintaxis para su cargado). En caso de que surja el error es IMPORTANTE eliminar la base de datos y volver a ejecutarla (o en su caso reiniciar el conteo de identities para la tabla en donde hubo el error), ya que de lo contrario se altera el orden de los PK, debido a que todos los campos "id" son de tipo identity, por lo que puede haber inconvenientes en los posteriores inserts que se sigan ejecutando. Y esto puede derivar en que la aplicación propuesta no funcione adecuadamente. Lo recomendable es ir ejecutando los insertes de a tramos.
-- En la clase Datos, el string de conexión que figura es el siguiente: "Data Source=localhost;Initial Catalog=CineSHOW;Integrated Security=True". Se recomienda realizar los ajustes correspondientes para lograr la conexión a la base de datos creada con el Script que se acompaña.
+- En la clase Datos, se recomienda realizar los ajustes correspondientes al string de conexión para lograr la conexión a la base de datos creada con el Script que se acompaña.
  
