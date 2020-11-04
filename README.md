@@ -18,7 +18,7 @@ NOTAS ACLARATORIAS:
 
 2) Se acompaña el Script de la Base de Datos. 
 
-3)Los menues que tienen funcionalidad son los siguientes:
+3) Los menues que tienen funcionalidad son los siguientes:
 A) En el menú Peliculas, el submenu Altas Peliculas contiene el ABM de Películas. En este caso se trabajaron las tablas: Peliculas, Generos, Idiomas,  Clasificaciones, Calificacion, Nacionalidades.
 B) En el menú Ver, submenú Reportes, se encuentran tres reportes:
 B.1) Peliculas. En este caso se trabajaron las tablas: Peliculas, Generos, Idiomas,  Clasificaciones, Calificacion, Nacionalidades.
