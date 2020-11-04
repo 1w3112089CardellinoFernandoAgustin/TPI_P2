@@ -60,6 +60,13 @@ namespace CineShowAPP
             else e.Cancel = true;
         }
 
+        private void frmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+            var objetoDatos = new Datos();
+            var tabla = objetoDatos.ObtenerDatosVentas(new DateTime(2020, 01, 01), new DateTime(2020, 12, 31));
+            Console.WriteLine(tabla);
+        }
+        
         private void peliculasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmReportePelicula rp = new frmReportePelicula();
@@ -69,6 +76,12 @@ namespace CineShowAPP
         private void entradasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporteEntradas re = new frmReporteEntradas();
+            re.ShowDialog();
+        }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteVentas re = new frmReporteVentas();
             re.ShowDialog();
         }
     }

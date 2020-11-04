@@ -19,7 +19,7 @@ namespace CineShowAPP
             this.conx = new SqlConnection();
             this.com = new SqlCommand();
             this.lec = null;
-            this.cadConex = @"Data Source=(localdb)\ServerMeli;Initial Catalog=CineSHOW;Integrated Security=True";//"Data Source=localhost;Initial Catalog=CineSHOW_BDMIn_TablaPeli_Auxil;Integrated Security=True";
+            this.cadConex = @"Data Source=localhost;Initial Catalog=CineSHOW;Integrated Security=True";//"Data Source=localhost;Initial Catalog=CineSHOW_BDMIn_TablaPeli_Auxil;Integrated Security=True";
         }
         /*
         public Datos(string cadenaConexion)
@@ -70,12 +70,20 @@ namespace CineShowAPP
 
         public DataTable consultar(string consultaSQL)
         {
-            this.conectar();
-            this.com.CommandText = consultaSQL;
-            DataTable tabla = new DataTable();
-            tabla.Load(com.ExecuteReader());
-            this.desconectar();
-            return tabla;
+            try
+            {
+                this.conectar();
+                this.com.CommandText = consultaSQL;
+                DataTable tabla = new DataTable();
+                tabla.Load(com.ExecuteReader());
+                this.desconectar();
+                return tabla;
+            }catch(Exception e)
+            {
+                this.desconectar();
+                System.Windows.Forms.MessageBox.Show("EXCEPTION:\n" + e.Message);
+                return null;
+            }
         }
 
         public void leerTabla(string nombreTabla)
@@ -121,6 +129,49 @@ namespace CineShowAPP
 
         }
 
+        public DataTable ObtenerDatosVentas(DateTime fechaInicial, DateTime fechaFinal)
+        {
+            using(var conexion = ObtenerConexion())
+            {
+                conexion.Open();
+                using(var comando = new SqlCommand())
+                {
+                    comando.Connection = conexion;
+                    comando.CommandText = @"select comprobante.id_comprobante,
+	                                            comprobante.fecha_compra,
+	                                            cliente.nombre 'nombre_cliente',
+	                                            cliente.apellido 'apellido_cliente',
+	                                            pelicula.titulo 'pelicula',
+	                                            detalle.monto ,
+	                                            empleado.nombre 'nombre_empleado',
+	                                            empleado.apellido 'apellido_empleado'
+                                            from Tickets ticket
+                                            inner join Detalles_Comprobantes detalle on ticket.id_det_comp = detalle.id_det_comp
+                                            --inner join Descuentos descuento on detalle.id_descuento = descuento.id_descuento
+                                            inner join Comprobantes_Compras comprobante on detalle.id_comprobante = comprobante.id_comprobante
+                                            inner join Salas_Funciones salaFuncion on detalle.id_sala_funcion = salaFuncion.id_sala_funcion
+                                            inner join Funciones funcion on salaFuncion.id_funcion = funcion.id_funcion
+                                            inner join Peliculas pelicula on funcion.id_pelicula = pelicula.id_pelicula
+                                            inner join Empleados empleado on comprobante.id_empleado = empleado.id_empleado
+                                            inner join Clientes cliente on comprobante.id_cliente = cliente.id_cliente
+                                            where comprobante.fecha_compra between @fechaInicial and @fechaFinal
+                                            order by fecha_compra";
+                    comando.Parameters.Add("@fechaInicial", SqlDbType.Date).Value = fechaInicial;
+                    comando.Parameters.Add("@fechaFinal", SqlDbType.Date).Value = fechaFinal;
+                    comando.CommandType = CommandType.Text;
 
+                    var lectorSQL = comando.ExecuteReader();
+                    var tabla = new DataTable();
+                    tabla.Load(lectorSQL);
+                    lectorSQL.Dispose();
+                    return tabla;
+                }
+            }
+        }
+
+        private SqlConnection ObtenerConexion()
+        {
+            return new SqlConnection(cadConex);
+        }
     }
 }
