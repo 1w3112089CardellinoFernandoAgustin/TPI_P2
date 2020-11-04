@@ -577,12 +577,13 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Cine Show - Entradas</Value>
+                  <Value>Cine SHOW - Entradas</Value>
                   <Style>
                     <FontFamily>Maiandra GD</FontFamily>
                     <FontSize>26pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <TextDecoration>Underline</TextDecoration>
+                    <Color>LightGrey</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -590,10 +591,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
-          <Top>0.76412cm</Top>
-          <Left>6.1087cm</Left>
+          <Top>0.98985cm</Top>
+          <Left>5.94995cm</Left>
           <Height>1.24672cm</Height>
-          <Width>9.65542cm</Width>
+          <Width>10.13167cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -629,18 +630,22 @@
                 <TextRun>
                   <Value>=Globals!ExecutionTime</Value>
                   <Style>
-                    <Format>d/M/yyyy</Format>
+                    <FontWeight>Bold</FontWeight>
+                    <Format>d 'de' MMMM 'de' yyyy</Format>
+                    <Color>LightGrey</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox28</rd:DefaultName>
           <Top>0.31929cm</Top>
-          <Left>19.07328cm</Left>
+          <Left>15.01447cm</Left>
           <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <Width>6.55881cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
@@ -661,7 +666,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.00542cm</Height>
+      <Height>1.04334cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -673,7 +678,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>=Globals!PageNumber</Value>
-                  <Style />
+                  <Style>
+                    <Color>LightGrey</Color>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -701,7 +708,13 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Página: </Value>
+                  <Value>Página:</Value>
+                  <Style>
+                    <Color>LightGrey</Color>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value xml:space="preserve"> </Value>
                   <Style />
                 </TextRun>
               </TextRuns>
@@ -714,6 +727,41 @@
           <Height>0.6cm</Height>
           <Width>1.37993cm</Width>
           <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox2">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Cine SHOW</Value>
+                  <Style>
+                    <FontFamily>Maiandra GD</FontFamily>
+                    <FontSize>11pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>LightGrey</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0.17639cm</Top>
+          <Left>9.58703cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>

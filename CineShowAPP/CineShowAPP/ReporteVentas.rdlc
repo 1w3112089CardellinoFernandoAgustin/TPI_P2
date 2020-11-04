@@ -1356,10 +1356,10 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>145mm</Height>
+        <Height>152.32851mm</Height>
         <Style />
       </Body>
-      <Width>169.9mm</Width>
+      <Width>174.56949mm</Width>
       <Page>
         <PageHeader>
           <Height>2.5cm</Height>
@@ -1373,8 +1373,9 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Reporte de ventas CineSHOW</Value>
+                      <Value>Reporte de ventas Cine SHOW</Value>
                       <Style>
+                        <FontFamily>Maiandra GD</FontFamily>
                         <FontSize>16pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                         <Color>LightGrey</Color>
@@ -1410,7 +1411,7 @@
                       <Value>=First(Fields!fechaDelReporte.Value, "ReporteVentas")</Value>
                       <Style>
                         <FontWeight>Bold</FontWeight>
-                        <Format>dddd, d 'de' MMMM 'de' yyyy</Format>
+                        <Format>d 'de' MMMM 'de' yyyy</Format>
                         <Color>LightGrey</Color>
                       </Style>
                     </TextRun>
@@ -1490,8 +1491,10 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>CineSHOW</Value>
+                      <Value>Cine SHOW</Value>
                       <Style>
+                        <FontFamily>Maiandra GD</FontFamily>
+                        <FontSize>11pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                         <Color>LightGrey</Color>
                       </Style>
@@ -1502,10 +1505,10 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>0cm</Top>
-              <Left>0.3175cm</Left>
-              <Height>1.1147cm</Height>
-              <Width>16.37687cm</Width>
+              <Top>0.17639cm</Top>
+              <Left>6.8314cm</Left>
+              <Height>0.7972cm</Height>
+              <Width>3.30645cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1517,12 +1520,76 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
+            <Textbox Name="Textbox1">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Página:</Value>
+                      <Style>
+                        <Color>LightGrey</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox1</rd:DefaultName>
+              <Top>0.17639cm</Top>
+              <Left>14.19438cm</Left>
+              <Height>0.6cm</Height>
+              <Width>1.36229cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox2">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Globals!PageNumber</Value>
+                      <Style>
+                        <Color>LightGrey</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox2</rd:DefaultName>
+              <Top>0.17639cm</Top>
+              <Left>15.59195cm</Left>
+              <Height>0.6cm</Height>
+              <Width>1.10241cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
           </ReportItems>
           <Style>
             <Border>
               <Style>None</Style>
             </Border>
-            <BackgroundColor>DimGray</BackgroundColor>
+            <BackgroundColor>SteelBlue</BackgroundColor>
           </Style>
         </PageFooter>
         <PageHeight>29.7cm</PageHeight>

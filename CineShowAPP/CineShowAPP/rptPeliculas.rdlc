@@ -530,13 +530,14 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Cine Show - Peliculas</Value>
+                  <Value>Cine SHOW - Peliculas</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
                     <FontFamily>Maiandra GD</FontFamily>
                     <FontSize>26pt</FontSize>
                     <FontWeight>SemiBold</FontWeight>
                     <TextDecoration>Underline</TextDecoration>
+                    <Color>LightGrey</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -545,9 +546,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>0.79058cm</Top>
-          <Left>7.80676cm</Left>
+          <Left>7.67447cm</Left>
           <Height>1.38783cm</Height>
-          <Width>9.37824cm</Width>
+          <Width>10.11907cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -567,18 +568,22 @@
                 <TextRun>
                   <Value>=Globals!ExecutionTime</Value>
                   <Style>
-                    <Format>d/M/yyyy</Format>
+                    <FontWeight>Bold</FontWeight>
+                    <Format>d 'de' MMMM 'de' yyyy</Format>
+                    <Color>LightGrey</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
           <Top>0.31432cm</Top>
-          <Left>21.9475cm</Left>
+          <Left>18.79896cm</Left>
           <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <Width>5.64854cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -614,7 +619,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.41704cm</Height>
+      <Height>1.126cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -626,7 +631,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>Página:</Value>
-                  <Style />
+                  <Style>
+                    <Color>LightGrey</Color>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -655,7 +662,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>=Globals!PageNumber</Value>
-                  <Style />
+                  <Style>
+                    <Color>LightGrey</Color>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -667,6 +676,41 @@
           <Height>0.6cm</Height>
           <Width>0.64792cm</Width>
           <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox3">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Cine SHOW</Value>
+                  <Style>
+                    <FontFamily>Maiandra GD</FontFamily>
+                    <FontSize>11pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>LightGrey</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox3</rd:DefaultName>
+          <Top>0.17639cm</Top>
+          <Left>11.34745cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>

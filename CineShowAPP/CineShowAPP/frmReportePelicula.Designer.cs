@@ -31,10 +31,7 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportePelicula));
-            this.dataTablePeliculasCompCBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsPelisComposicionC = new CineShowAPP.dsPelisComposicionC();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataTablePelisCompCTableAdapter = new CineShowAPP.dsPelisComposicionCTableAdapters.DataTablePelisCompCTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnImprimirPor = new System.Windows.Forms.Button();
             this.rbtTitulo = new System.Windows.Forms.RadioButton();
@@ -56,21 +53,14 @@
             this.lblDesde = new System.Windows.Forms.Label();
             this.lblHasta = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTablePeliculasCompCBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsPelisComposicionC)).BeginInit();
+            this.dataTablePeliculasCompCBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsPelisComposicionC = new CineShowAPP.dsPelisComposicionC();
+            this.dataTablePelisCompCTableAdapter = new CineShowAPP.dsPelisComposicionCTableAdapters.DataTablePelisCompCTableAdapter();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTablePeliculasCompCBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsPelisComposicionC)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataTablePeliculasCompCBindingSource
-            // 
-            this.dataTablePeliculasCompCBindingSource.DataMember = "DataTablePeliculasCompC";
-            this.dataTablePeliculasCompCBindingSource.DataSource = this.dsPelisComposicionC;
-            // 
-            // dsPelisComposicionC
-            // 
-            this.dsPelisComposicionC.DataSetName = "dsPelisComposicionC";
-            this.dsPelisComposicionC.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -90,10 +80,6 @@
             this.reportViewer1.TabIndex = 7;
             this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
-            // dataTablePelisCompCTableAdapter
-            // 
-            this.dataTablePelisCompCTableAdapter.ClearBeforeFill = true;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
@@ -104,7 +90,7 @@
             this.panel1.Location = new System.Drawing.Point(3, 54);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(97, 140);
-            this.panel1.TabIndex = 2;
+            this.panel1.TabIndex = 1;
             // 
             // btnImprimirPor
             // 
@@ -156,10 +142,10 @@
             // 
             // txtFiltroTitulo
             // 
-            this.txtFiltroTitulo.Location = new System.Drawing.Point(3, 216);
+            this.txtFiltroTitulo.Location = new System.Drawing.Point(3, 224);
             this.txtFiltroTitulo.Name = "txtFiltroTitulo";
             this.txtFiltroTitulo.Size = new System.Drawing.Size(210, 20);
-            this.txtFiltroTitulo.TabIndex = 3;
+            this.txtFiltroTitulo.TabIndex = 2;
             // 
             // btnFiltrarTitulo
             // 
@@ -168,10 +154,10 @@
             this.btnFiltrarTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFiltrarTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrarTitulo.Image = global::CineShowAPP.Properties.Resources.carrete_de_pelicula;
-            this.btnFiltrarTitulo.Location = new System.Drawing.Point(3, 242);
+            this.btnFiltrarTitulo.Location = new System.Drawing.Point(3, 250);
             this.btnFiltrarTitulo.Name = "btnFiltrarTitulo";
             this.btnFiltrarTitulo.Size = new System.Drawing.Size(124, 28);
-            this.btnFiltrarTitulo.TabIndex = 4;
+            this.btnFiltrarTitulo.TabIndex = 3;
             this.btnFiltrarTitulo.Text = "Buscar Título";
             this.btnFiltrarTitulo.UseVisualStyleBackColor = false;
             this.btnFiltrarTitulo.Click += new System.EventHandler(this.btnFiltrarTitulo_Click);
@@ -184,27 +170,27 @@
             this.btnFiltroFecha.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFiltroFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltroFecha.Image = ((System.Drawing.Image)(resources.GetObject("btnFiltroFecha.Image")));
-            this.btnFiltroFecha.Location = new System.Drawing.Point(3, 360);
+            this.btnFiltroFecha.Location = new System.Drawing.Point(3, 368);
             this.btnFiltroFecha.Name = "btnFiltroFecha";
             this.btnFiltroFecha.Size = new System.Drawing.Size(124, 28);
-            this.btnFiltroFecha.TabIndex = 7;
+            this.btnFiltroFecha.TabIndex = 6;
             this.btnFiltroFecha.Text = "Buscar Fecha";
             this.btnFiltroFecha.UseVisualStyleBackColor = false;
             this.btnFiltroFecha.Click += new System.EventHandler(this.dtpFiltroFecha_Click);
             // 
             // dtpHasta
             // 
-            this.dtpHasta.Location = new System.Drawing.Point(3, 334);
+            this.dtpHasta.Location = new System.Drawing.Point(3, 342);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(210, 20);
-            this.dtpHasta.TabIndex = 6;
+            this.dtpHasta.TabIndex = 5;
             // 
             // dtpDesde
             // 
-            this.dtpDesde.Location = new System.Drawing.Point(3, 292);
+            this.dtpDesde.Location = new System.Drawing.Point(3, 300);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(210, 20);
-            this.dtpDesde.TabIndex = 5;
+            this.dtpDesde.TabIndex = 4;
             // 
             // btnImprimirTodo
             // 
@@ -216,7 +202,7 @@
             this.btnImprimirTodo.Location = new System.Drawing.Point(3, 3);
             this.btnImprimirTodo.Name = "btnImprimirTodo";
             this.btnImprimirTodo.Size = new System.Drawing.Size(75, 45);
-            this.btnImprimirTodo.TabIndex = 1;
+            this.btnImprimirTodo.TabIndex = 0;
             this.btnImprimirTodo.Text = "Imprimir Todo";
             this.btnImprimirTodo.UseVisualStyleBackColor = false;
             this.btnImprimirTodo.Click += new System.EventHandler(this.btnImprimirTodo_Click);
@@ -224,25 +210,25 @@
             // cboGenero
             // 
             this.cboGenero.FormattingEnabled = true;
-            this.cboGenero.Location = new System.Drawing.Point(3, 410);
+            this.cboGenero.Location = new System.Drawing.Point(3, 418);
             this.cboGenero.Name = "cboGenero";
             this.cboGenero.Size = new System.Drawing.Size(209, 21);
-            this.cboGenero.TabIndex = 8;
+            this.cboGenero.TabIndex = 7;
             // 
             // cboIdioma
             // 
             this.cboIdioma.FormattingEnabled = true;
-            this.cboIdioma.Location = new System.Drawing.Point(3, 487);
+            this.cboIdioma.Location = new System.Drawing.Point(3, 495);
             this.cboIdioma.Name = "cboIdioma";
             this.cboIdioma.Size = new System.Drawing.Size(209, 21);
-            this.cboIdioma.TabIndex = 10;
+            this.cboIdioma.TabIndex = 9;
             // 
             // lblGenero
             // 
             this.lblGenero.AutoSize = true;
             this.lblGenero.BackColor = System.Drawing.Color.SkyBlue;
             this.lblGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenero.Location = new System.Drawing.Point(3, 391);
+            this.lblGenero.Location = new System.Drawing.Point(3, 399);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(59, 16);
             this.lblGenero.TabIndex = 10;
@@ -253,7 +239,7 @@
             this.lblIdioma.AutoSize = true;
             this.lblIdioma.BackColor = System.Drawing.Color.SkyBlue;
             this.lblIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdioma.Location = new System.Drawing.Point(3, 468);
+            this.lblIdioma.Location = new System.Drawing.Point(3, 476);
             this.lblIdioma.Name = "lblIdioma";
             this.lblIdioma.Size = new System.Drawing.Size(55, 16);
             this.lblIdioma.TabIndex = 11;
@@ -267,10 +253,10 @@
             this.btnIdioma.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIdioma.Image = ((System.Drawing.Image)(resources.GetObject("btnIdioma.Image")));
-            this.btnIdioma.Location = new System.Drawing.Point(3, 514);
+            this.btnIdioma.Location = new System.Drawing.Point(3, 522);
             this.btnIdioma.Name = "btnIdioma";
             this.btnIdioma.Size = new System.Drawing.Size(124, 28);
-            this.btnIdioma.TabIndex = 11;
+            this.btnIdioma.TabIndex = 10;
             this.btnIdioma.Text = "Buscar Idioma";
             this.btnIdioma.UseVisualStyleBackColor = false;
             this.btnIdioma.Click += new System.EventHandler(this.btnIdioma_Click);
@@ -283,10 +269,10 @@
             this.btnGenero.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenero.Image = ((System.Drawing.Image)(resources.GetObject("btnGenero.Image")));
-            this.btnGenero.Location = new System.Drawing.Point(3, 437);
+            this.btnGenero.Location = new System.Drawing.Point(3, 445);
             this.btnGenero.Name = "btnGenero";
             this.btnGenero.Size = new System.Drawing.Size(124, 28);
-            this.btnGenero.TabIndex = 9;
+            this.btnGenero.TabIndex = 8;
             this.btnGenero.Text = "Buscar Género";
             this.btnGenero.UseVisualStyleBackColor = false;
             this.btnGenero.Click += new System.EventHandler(this.btnGenero_Click);
@@ -296,7 +282,7 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.SkyBlue;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(3, 197);
+            this.lblTitulo.Location = new System.Drawing.Point(3, 205);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(98, 16);
             this.lblTitulo.TabIndex = 14;
@@ -307,7 +293,7 @@
             this.lblDesde.AutoSize = true;
             this.lblDesde.BackColor = System.Drawing.Color.SkyBlue;
             this.lblDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesde.Location = new System.Drawing.Point(3, 273);
+            this.lblDesde.Location = new System.Drawing.Point(3, 281);
             this.lblDesde.Name = "lblDesde";
             this.lblDesde.Size = new System.Drawing.Size(55, 16);
             this.lblDesde.TabIndex = 15;
@@ -318,7 +304,7 @@
             this.lblHasta.AutoSize = true;
             this.lblHasta.BackColor = System.Drawing.Color.SkyBlue;
             this.lblHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHasta.Location = new System.Drawing.Point(3, 315);
+            this.lblHasta.Location = new System.Drawing.Point(3, 323);
             this.lblHasta.Name = "lblHasta";
             this.lblHasta.Size = new System.Drawing.Size(50, 16);
             this.lblHasta.TabIndex = 16;
@@ -356,7 +342,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 17;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -375,6 +361,20 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(250, 553);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // dataTablePeliculasCompCBindingSource
+            // 
+            this.dataTablePeliculasCompCBindingSource.DataMember = "DataTablePeliculasCompC";
+            this.dataTablePeliculasCompCBindingSource.DataSource = this.dsPelisComposicionC;
+            // 
+            // dsPelisComposicionC
+            // 
+            this.dsPelisComposicionC.DataSetName = "dsPelisComposicionC";
+            this.dsPelisComposicionC.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataTablePelisCompCTableAdapter
+            // 
+            this.dataTablePelisCompCTableAdapter.ClearBeforeFill = true;
+            // 
             // frmReportePelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -388,16 +388,16 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "frmReportePelicula";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte Peliculas";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmReportePelicula_FormClosing);
             this.Load += new System.EventHandler(this.frmReportePelicula_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataTablePeliculasCompCBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsPelisComposicionC)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTablePeliculasCompCBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsPelisComposicionC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

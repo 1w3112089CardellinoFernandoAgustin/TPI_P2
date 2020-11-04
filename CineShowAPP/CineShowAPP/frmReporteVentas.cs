@@ -108,5 +108,19 @@ namespace CineShowAPP
             
             GetSalesReport(fechaInicial, fechaFinal);
         }
+
+        private void frmReporteVentas_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Está seguro que desea salir?",
+                   "SALIENDO",
+                   MessageBoxButtons.YesNo,
+                   MessageBoxIcon.Question,
+                   MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+
+                e.Cancel = false;
+            }
+            else e.Cancel = true;
+        }
     }
 }

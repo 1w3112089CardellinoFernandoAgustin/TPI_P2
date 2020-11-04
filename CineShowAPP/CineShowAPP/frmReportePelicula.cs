@@ -139,7 +139,7 @@ namespace CineShowAPP
 
         private void dtpFiltroFecha_Click(object sender, EventArgs e)
         {
-            if (dtpDesde.Value >= dtpHasta.Value)
+            if (dtpDesde.Value > dtpHasta.Value)
             {
                 MessageBox.Show("Debe ingresar un orden correcto de las fechas", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 dtpDesde.Focus();
